@@ -1,0 +1,10 @@
+.timer {
+    line-height: 30px;
+    width: 70px;
+    background-color: black;
+    color: red;
+    border: solid red 3px;
+    border-radius: 10%;
+    font-weight: bold;
+    text-align: center;
+}
