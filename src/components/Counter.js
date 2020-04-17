@@ -26,8 +26,10 @@ class Counter extends React.Component {
     render() {
         return(
             <>
-                <h3>Your moves are watched</h3>
-                <p className= "counter">{this.state.count}</p>
+                <div className= "counterContainer">
+                    <h3>Your moves are watched</h3>
+                    <p className= "counter">{this.state.count}</p>
+                </div>
             </>
         )
     }
