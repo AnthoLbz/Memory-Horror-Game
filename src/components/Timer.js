@@ -37,10 +37,12 @@ class Timer extends React.Component {
         const { minutes, seconds } = this.state
 
         return (
-        <div>
-            <h3>Your remaining time:</h3> 
-            <p className= "timer">{ minutes }:{ seconds < 10 ? `0${ seconds }` : seconds }</p>
-        </div>
+          <>
+            <div className= "timerContainer">
+                <h3>Your remaining time:</h3> 
+                <p className= "timer">{ minutes }:{ seconds < 10 ? `0${ seconds }` : seconds }</p>
+            </div>
+          </>
         )
     }
 }
