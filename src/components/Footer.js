@@ -8,10 +8,10 @@ const Footer = () => (
     <footer>
         <div id='listFooter'>
         <List link horizontal >
-            <List.Item as='a' id='wordList1'>Home</List.Item>
-            <List.Item as='a' id='wordList'>Products</List.Item>
-            <List.Item as='a' id='wordList'>Company</List.Item>
-            <List.Item as='a' id='wordList'>Blog</List.Item>
+            <List.Item as='a'>Home</List.Item>
+            <List.Item as='a'>Products</List.Item>
+            <List.Item as='a'>Company</List.Item>
+            <List.Item as='a'>Blog</List.Item>
         </List>
         </div>
     </footer>

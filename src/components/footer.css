@@ -4,19 +4,11 @@
     
 }
 
-#wordList{
+#listFooter a{
     color:#AD1B1B;
     margin-left: 0;
-    border-left: black solid 2px;
     padding: 20px 50px ;
     font-family:'myhardboard' ;
-    
-}
 
-#wordList1{
-    color: #AD1B1B;
-    padding: 10px 50px;
-    font-family:'myhardboard' ;
 }
-
 
