@@ -6,7 +6,19 @@ import "./components/button.css";
 export default function App() {
   return (
     <>
-    <div className="Button hvr-sweep-to-top">
+      <div className="Button">
+        <Button
+          onClick={() => {
+            console.log("You clicked!");
+          }}
+          type="button"
+          buttonSize="btn--medium"
+          buttonStyle="btn--return--solid"
+        >
+          Go back home, pussy !
+      </Button>
+      </div>
+      <div className="Button">
       <Button
         onClick={() => {
           console.log("You clicked!");
