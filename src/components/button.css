@@ -75,24 +75,32 @@ a {
   display: inline-block;
   font-weight: bold;
   font-size: 50px;
-  background-color: rgb(71, 71, 71);
-  text-shadow: -1px -1px rgb(53, 52, 52), 1px 1px rgb(56, 56, 56);
+  opacity: 90%;
+  background-color: rgb(59, 59, 59);
+  text-shadow: -2px -2px rgb(2, 0, 0), 2px 2px rgb(92, 2, 2);
   color: var(--hard);
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   -o-border-radius: 7px;
-  border-radius: 7px;
-  border:solid rgb(71, 71, 71);
+  border-radius: 10px;
+  border:solid rgb(22, 22, 22);
   box-shadow: 0.2rem 0.1em rgb(26, 0, 0);
   cursor: pointer;
+  margin-right: auto;
+  margin-left: auto;
   position: relative;
-  left: 37%;
+  left: 40%;
 }
 
-.btn--play--solid :active {
+.btn--play--solid:active{
   box-shadow: none;
   position: relative;
   top: 0.2em;
+}
+.btn--play--solid:hover{
+  color: grey;
+  background-image: url(https://media2.giphy.com/media/f4IjBQupqojhqQzKk2/giphy.webp?cid=ecf05e47359f10b3851c1e1b53bf759f3008f6e36842309d&rid=giphy.webp);
+
 }
 
 /*button size */

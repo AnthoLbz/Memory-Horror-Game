@@ -14,38 +14,6 @@ const Landing = () => {
         <p></p>
         <p></p>
       </h2>
-
-      <>
-        <Button
-          onClick={() => {
-            console.log("You clicked!");
-          }}
-          type="button"
-          buttonSize="btn--large"
-          buttonStyle="btn--easy--solid"
-        >
-          easy
-        </Button>
-        <Button
-          onClick={() => {
-            console.log("You clicked!");
-          }}
-          type="button"
-          buttonSize="btn--large"
-          buttonStyle="btn--medium--solid"
-        >
-          medium
-        </Button>
-        <Button
-          onClick={() => {
-            console.log("You clicked!");
-          }}
-          type="button"
-          buttonSize="btn--large"
-          buttonStyle="btn--hard--solid"
-        >
-          hard
-        </Button>
         <Button
           onClick={() => {
             console.log("You clicked!");
@@ -56,8 +24,10 @@ const Landing = () => {
         >
           ► Play
         </Button>
+        <div className="videos" onClick>
+        Videos
+        </div>
       </>
-    </>
   );
 };
 export default Landing;
