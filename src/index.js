@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import './fonts/Faceyourfears-31J6.ttf'
+// import "./fonts/Dkmothman-vXm4.ttf";
 
 ReactDOM.render(
   <React.StrictMode>

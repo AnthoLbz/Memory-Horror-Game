@@ -1,7 +1,12 @@
 @font-face {
   font-family: 'Faceyourfears';
   src: local('Faceyourfears'), url(./fonts/Faceyourfears-31J6.ttf) format('truetype');
+  
 }
+/* @font-face {
+  font-family: 'Dkmothman';
+  src: local('Dkmothman'), url(./fonts/Dkmothman-vXm4.ttf) format('truetype');
+} */
 
 body {
   margin: 0;

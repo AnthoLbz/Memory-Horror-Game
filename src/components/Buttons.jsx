@@ -5,10 +5,11 @@ const STYLES = [
     "btn--easy--solid",
     "btn--medium--solid",
     "btn--hard--solid",
-    "btn--return--solid"
+    "btn--return--solid",
+    "btn--play--solid"
 ];
 
-const SIZES = ["btn--medium", "btn--large"];
+const SIZES = ["btn--medium", "btn--large","btn--game"];
 
 const Button = ({ children, type, onClick, buttonStyle, buttonSize }) => {
     const checkButtonStyle = STYLES.includes(buttonStyle)

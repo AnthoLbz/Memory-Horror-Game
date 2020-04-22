@@ -1,16 +1,11 @@
 :root {
-  --easy: #dd1515;
-  --medium: #c40505;
-  --hard: #960000;
+  --easy: #e60000;
+  --medium: #ac0000;
+  --hard: #880000;
   --return: #fdfdfd;
 }
-
 .btn {
-  font-family: "Faceyourfears", sans-serif;
-  font-weight: 100;
-  height: 60px;
-  width: 200px;
-  cursor: pointer;
+  font-family: "Faceyourfears";
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,52 +17,83 @@ a {
   font-size: 30px;
   text-transform: capitalize;
   text-decoration: none;
-
 }
 
 /*button styles */
 .btn--easy--solid {
   color: black;
   border: none;
-  background: -webkit-linear-gradient(rgb(133, 98, 1) 50%,var(--easy) 50%);
+  background: -webkit-linear-gradient(rgb(86, 87, 84) 50%, var(--easy) 50%);
+  opacity: 70%;
   background-size: 200px 120px;
+  position: relative;
+  left:80% ;
 }
 .btn--easy--solid:hover {
-  background-position: 0 -60px ;
+  background-position: 0 -60px;
   color: var(--return);
 }
 .btn--medium--solid {
   color: black;
   border: none;
-  background: -webkit-linear-gradient(rgb(133, 98, 1) 50%,var(--medium) 50%);
+  background: -webkit-linear-gradient(rgb(86, 87, 84) 50%, var(--medium) 50%);
+  opacity: 70%;
   background-size: 200px 120px;
+  position: relative;
+  left:80% ;
 }
 .btn--medium--solid:hover {
-  background-position: 0 -60px ;
+  background-position: 0 -60px;
   color: var(--return);
 }
 .btn--hard--solid {
   color: black;
   border: none;
-  background: -webkit-linear-gradient(rgb(133, 98, 1) 50%,var(--hard) 50%);
+  background: -webkit-linear-gradient(rgb(86, 87, 84) 50%, var(--hard) 50%);
+  opacity: 70%;
   background-size: 200px 120px;
+  position: relative;
+  left:80% ;
 }
 .btn--hard--solid:hover {
-  background-position: 0 -60px ;
+  background-position: 0 -60px;
   color: var(--return);
 }
 .btn--return--solid {
   color: black;
   border: none;
-  background: -webkit-linear-gradient(0deg,var(--hard) 50%,var(--return) 50%);
+  background: -webkit-linear-gradient(0deg, var(--hard) 50%, transparent 50%);
   background-size: 470px 120px;
 }
 
 .btn--return--solid:hover {
   background-position: -235px 0;
-  color: black;
+  color: var(--return);
+}
+.btn--play--solid{
+  text-align: center;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 50px;
+  background-color: rgb(71, 71, 71);
+  text-shadow: -1px -1px rgb(53, 52, 52), 1px 1px rgb(56, 56, 56);
+  color: var(--hard);
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 7px;
+  border:solid rgb(71, 71, 71);
+  box-shadow: 0.2rem 0.1em rgb(26, 0, 0);
+  cursor: pointer;
+  position: relative;
+  left: 37%;
 }
 
+.btn--play--solid :active {
+  box-shadow: none;
+  position: relative;
+  top: 0.2em;
+}
 
 /*button size */
 
@@ -81,4 +107,17 @@ a {
   padding: 15px 30px;
   font-size: 20px;
   width: 160px;
+}
+
+.btn--game {
+  margin: 5px;
+  height: 100px;
+  width: 250px;
+  padding: 10px 0 10px 10px;
+}
+
+.btn--game :active {
+  box-shadow: none;
+  position: relative;
+  top: 0.2em;
 }
