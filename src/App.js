@@ -1,43 +1,28 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
-import VideoPlayer from './components/VideoPlayer'
-import axios from 'axios'
+import VideoPlayer from './components/VideoPlayer';
+import axios from 'axios';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      player: null
-    };
-    this.getVideo = this.getVideo.bind(this);
-  }
+const App = () =>{
+  const [player, setPlayer] = useState([])
 
-  componentDidMount() {
-    this.getVideo();
-  }
+  useEffect(() =>{
+    getVideo()
+  }, [])
 
-  getVideo() {
-    axios
-      .get("https://horrormemo.herokuapp.com/memory")
-      .then(response => response.data)
-      .then(data => {
-        this.setState({
-          player: data[0],
-        });
-      });
-  }
-
-  render() {
+  const getVideo = () =>{
+      axios.get("https://horrormemo.herokuapp.com/memory")
+        .then(response => setPlayer(response.data))
+    }
+    console.log(player)
     return (
       <div className="App">
-        {this.state.player ? (
-          <VideoPlayer player={this.state.player} />
-        ) : (
-          <p>No data yet</p>
+        {player.map(player =>
+          <VideoPlayer name={player.name} video={player.video}/>
         )}
       </div>
     );
-  }
+  
 }
 
 export default App;

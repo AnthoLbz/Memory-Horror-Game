@@ -1,13 +1,12 @@
 import React from 'react'
 import ReactPlayer from 'react-player'
 
-function VideoPlayer ({player}) {
+function VideoPlayer ({name,video}) {
     return(
     <div>
-    <h4>{player.name}</h4>
-    <ReactPlayer url={player.video} playing />
-    <h4>{player.name}</h4>
-    <ReactPlayer url={player.video} playing />
+    <h4>{name}</h4>
+    <ReactPlayer url={video} playing />
+
     </div>
     
     )
