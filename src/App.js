@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import Board from './components/Card'
+import axios from 'axios'
 
-function App() {
+
+const App = () => {
+  const [cards, setCards] = useState([])
+  const [flipped, setFlipped] = useState([])
+
+  const handleClick = (id) => setFlipped([...flipped, id])
+
+  useEffect(() =>{
+    getData()
+  }, [])
+
+  useEffect(() => {
+    setCards(initializeDeck())
+  }, [])
+
+  const getData = () => {
+    axios.get('https://horrormemo.herokuapp.com/memory')
+        // .then(response => console.log(response.data))
+        .then(response => setCards(response.data))
+  }
+
+  // déplacer getData dans un fichier genre initializeDeck (voir vers 23 minutes)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+    <Board cards={cards} flipped={flipped} handleClick={handleClick} />
+    </>
+  )
 }
+
 
 export default App;
