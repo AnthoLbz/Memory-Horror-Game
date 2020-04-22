@@ -17,7 +17,8 @@ const App = () =>{
     console.log(player)
     return (
       <div className="App">
-        {player.map(player =>
+        {player.filter(player => player.id <= 19)
+        .map(player =>
           <VideoPlayer name={player.name} video={player.video}/>
         )}
       </div>
