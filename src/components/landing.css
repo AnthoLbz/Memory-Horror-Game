@@ -37,6 +37,11 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
+.play{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
 .videos{
   color: black;
   font-family: "Faceyourfears";

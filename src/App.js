@@ -1,13 +1,14 @@
 import React from "react";
 import "./App.css";
-import Landing from "./components/Landing";
 import "./components/landing.css";
+import Router from "./Router";
 
 function App() {
   return (
     <>
-      <Landing/>
-    </>    
+      <h1 className="title">Memory Horror Game</h1>
+      <Router />
+    </>
   );
 }
 
