@@ -3,7 +3,7 @@ import Card from './Card'
 
 
 
-function Board ({cards, flipped, handleClick }) {
+function Board ({cards, cardsBack, flipped, handleClick }) {
     return(
         <div className='board'>
             {cards.map(card => (
@@ -11,11 +11,11 @@ function Board ({cards, flipped, handleClick }) {
                     id={card.id}
                     width={100}
                     height={150}
-                    back={card.image}
-                    front={card.image}
+                    back={cardsBack}
+                    cardsFront={card.image}
                     flipped={flipped.includes(card.id)}
                     handleClick={() => handleClick(card.id)}
-                />   
+                />       
             ))}
         </div>  
     )
