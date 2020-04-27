@@ -3,10 +3,10 @@
   src: local('Faceyourfears'), url(./fonts/Faceyourfears-31J6.ttf) format('truetype');
   
 }
-/* @font-face {
-  font-family: 'Dkmothman';
-  src: local('Dkmothman'), url(./fonts/Dkmothman-vXm4.ttf) format('truetype');
-} */
+@font-face {
+  font-family: 'Mukadua';
+  src: local('Mukadua'), url(./fonts/Mukadua.ttf) format('truetype');
+}
 
 body {
   margin: 0;
