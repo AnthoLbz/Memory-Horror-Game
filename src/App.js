@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import Timer from './components/Timer'
+import UserTimer from './components/UserTimer'
 
 function App() {
   return (
     <>
-      <Timer />
+      <UserTimer />
     </>
   );
 }
