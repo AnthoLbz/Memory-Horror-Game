@@ -37,6 +37,7 @@ class PlayList extends Component {
       <div>
         <AudioPlayer
         style={{ width: '400px'}} 
+          autoPlay={true}
           autoPlayAfterSrcChange={true}
           showSkipControls={true}
           showJumpControls={false}
@@ -45,6 +46,7 @@ class PlayList extends Component {
           onClickNext={this.handleClickNext}
           customAdditionalControls={[]}
           layout="horizontal"
+          volume="0.2"
         />
       </div>
     )
