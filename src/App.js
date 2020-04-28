@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import Board from './components/Board'
 import axios from 'axios'
 import shuffle from 'shuffle-array'
+import Timer from './components/Timer'
 import './App.css';
+import 'semantic-ui-css/semantic.min.css'
 
 const App = () => {
 
@@ -67,8 +69,11 @@ const sameCardClicked = (id) => flipped.includes(id)
       handleClick={handleClick} 
       disabled={disabled}
       solved={solved} />
-    </>
-  )
+    
+    <Timer />
+      
+      </>
+  );
 }
 
 
