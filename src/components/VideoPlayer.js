@@ -28,13 +28,13 @@ const VideoPlayer =() =>{
             <div className="VideoPlayer">
               <img className="Card" src={player.image} alt={player.name} />
               <GlitchClip className="Description">
-              <h4 className="Description">{player.name}</h4>
+                <a href={player.wiki} className="Description" target="_blank" rel="noreferrer noopener">{player.name}</a>
               </GlitchClip>
               <ReactPlayer className ="Player" 
-              url={player.video} 
-              controls = 'true'
-              width = '30%'
-              height = '210px'/>
+                url={player.video} 
+                controls = 'true'
+                width = '30%'
+                height = '210px'/>
             </div>
             <div>
               <hr />

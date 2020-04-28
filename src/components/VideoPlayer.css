@@ -25,10 +25,10 @@
   }
   
   .Title {
-    background-image: url(https://media.giphy.com/media/Dn9McpMC10Mik/giphy.gif);
+    background-image: url(https://media.giphy.com/media/LShzvtC3Ri1oO7TMHT/giphy.gif);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 0.2px rgb(250, 250, 250);
+    /* -webkit-text-stroke: 0.2px rgb(250, 250, 250); */
     font-size: 80px;
     font-family: "Faceyourfears";
     text-align: center;
@@ -88,3 +88,6 @@ hr{
   margin: 50px;
 }
 
+a {
+  text-decoration: none;
+}
