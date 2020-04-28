@@ -15,6 +15,8 @@ const App = () => {
   const [solved, setSolved] = useState([])
   const [disabled, setDisabled] = useState(false)
   const [count, setCount] = useState(0)
+  const [minutes, setMinutes] = useState(0)
+  const [seconds, setSeconds] = useState(10)
   
   const countMoves = (count) => {
     setCount(count + 1)
@@ -52,8 +54,12 @@ const App = () => {
   return flippedCard.name === clickedCard.name
  }
 
+ useEffect(()=>{
+  timer(minutes,seconds)
+ }, [])
  
   useEffect(() => {
+    
     getData()
   }, [])
   
@@ -65,8 +71,24 @@ const App = () => {
           setCardsBack(response.data.filter(e => e.id === 27).map(e => e.image))
         })
       }
+  
+  const timer = (minutes,seconds) => {
+      const interval = setInterval(() => {
+      if (seconds > 0) {
+        setSeconds(seconds => seconds - 1)
+      }
+      if (seconds === 0) {
+        if (minutes === 0) {
+         clearInterval(interval)
+        } else {
+            setMinutes(minutes - 1)
+            setSeconds(seconds = 59)
+        }
+      }
+    }, 1000)
+  }
 
- console.log(cards)
+//  console.log(cards)
 
   return (
     <>
@@ -76,9 +98,11 @@ const App = () => {
       flipped={flipped} 
       handleClick={handleClick} 
       disabled={disabled}
-      solved={solved} />
+      solved={solved}
+      />
     
-    <Timer />
+    <Timer minutes={minutes}
+      seconds={seconds}  />
     <Counter count={count} />
     </>
   );

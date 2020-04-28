@@ -1,7 +1,7 @@
 import React from 'react'
 import './Counter.css'
 
-function Counter({count}){
+function Counter ({count}){
         return(
             <>
                 <div className= "counterContainer">

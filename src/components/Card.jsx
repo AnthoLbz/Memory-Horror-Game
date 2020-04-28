@@ -6,7 +6,7 @@ function Card({ id, width, height, back,solved, cardsFront, flipped, handleClick
         style={{
             width, height
         }}
-        onClick={() => disabled ? null : handleClick(id)} // si le board est disabled, on n'autorise pas le clic (42 min 30), sinon handleClick
+        onClick={() => disabled ? null : handleClick(id)} 
         >
         <div className="flipper">
             <img
