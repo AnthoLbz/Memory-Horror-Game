@@ -3,6 +3,7 @@ import Board from './components/Board'
 import axios from 'axios'
 import shuffle from 'shuffle-array'
 import Timer from './components/Timer'
+import Counter from './components/Counter'
 import './App.css';
 import 'semantic-ui-css/semantic.min.css'
 
@@ -13,7 +14,11 @@ const App = () => {
   const [flipped, setFlipped] = useState([])
   const [solved, setSolved] = useState([])
   const [disabled, setDisabled] = useState(false)
+  const [count, setCount] = useState(0)
   
+  const countMoves = (count) => {
+    setCount(count + 1)
+  }
 
   const handleClick = (id) => {
     setDisabled(true) 
@@ -24,9 +29,11 @@ const App = () => {
       if (sameCardClicked(id)) return 
         setFlipped([flipped[0], id])
       if (isMatch(id)){
+        countMoves(count)
         setSolved([...solved, flipped[0], id]) 
         resetCards()
       } else {
+        countMoves(count)
         setTimeout(resetCards, 1000)
       }
     }   
@@ -37,7 +44,7 @@ const App = () => {
    setDisabled(false)
  } 
 
-const sameCardClicked = (id) => flipped.includes(id) 
+ const sameCardClicked = (id) => flipped.includes(id) 
 
  const isMatch = (id) => {
   const clickedCard = cards.find(card => card.id === id) 
@@ -45,6 +52,7 @@ const sameCardClicked = (id) => flipped.includes(id)
   return flippedCard.name === clickedCard.name
  }
 
+ 
   useEffect(() => {
     getData()
   }, [])
@@ -71,8 +79,8 @@ const sameCardClicked = (id) => flipped.includes(id)
       solved={solved} />
     
     <Timer />
-      
-      </>
+    <Counter count={count} />
+    </>
   );
 }
 
