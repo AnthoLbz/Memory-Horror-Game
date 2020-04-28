@@ -5,6 +5,7 @@ import shuffle from 'shuffle-array'
 import './App.css';
 
 const App = () => {
+
   const [cards, setCards] = useState([])
   const [cardsBack, setCardsBack] = useState([])
   const [flipped, setFlipped] = useState([])
@@ -13,15 +14,15 @@ const App = () => {
   
 
   const handleClick = (id) => {
-    setDisabled(true) // quand on clique sur une carte, on ne peut pas cliquer sur une autre (41 min 20)
-    if (flipped.length === 0) { // aucune carte n'est retournée (43'50)
-      setFlipped([id]) // au clic, on met l'ID dans le tableau flipped
-      setDisabled(false) // une autre carte pourra être retournée car le board est disabled
+    setDisabled(true) 
+    if (flipped.length === 0) { 
+      setFlipped([id]) 
+      setDisabled(false) 
     } else {
-      if (sameCardClicked(id)) return // carte déjà retournée et carte qu'on retourne maintenant
+      if (sameCardClicked(id)) return 
         setFlipped([flipped[0], id])
       if (isMatch(id)){
-        setSolved([...solved, flipped[0], id]) // nouveau tableau : on spread les cartes trouvées, on les met dans le tableau; carte retournée / carte qu'on vient de cliquer
+        setSolved([...solved, flipped[0], id]) 
         resetCards()
       } else {
         setTimeout(resetCards, 1000)
@@ -33,7 +34,8 @@ const App = () => {
    setFlipped([])
    setDisabled(false)
  } 
-const sameCardClicked = (id) => flipped.includes(id) // on veut savoir si les valeurs du tableau flipped contiennent cette carte
+
+const sameCardClicked = (id) => flipped.includes(id) 
 
  const isMatch = (id) => {
   const clickedCard = cards.find(card => card.id === id) 
@@ -49,12 +51,12 @@ const sameCardClicked = (id) => flipped.includes(id) // on veut savoir si les va
     axios.get('https://horrormemo.herokuapp.com/memory')
         // .then(response => console.log(response.data))
         .then(response => {
-          setCards(response.data.filter(e => e.id <= 10).reduce((res, current) => [...res, current, {id : current.id +10, name : current.name, image :current.image }],[]))
+          setCards(shuffle(shuffle(response.data.filter(e => e.id <= 19)).filter((e, index) => index < 10).reduce((res, current) => [...res, current, {id : current.id +20, name : current.name, image :current.image }],[])))
           setCardsBack(response.data.filter(e => e.id === 27).map(e => e.image))
         })
       }
 
-console.log(cards)
+ console.log(cards)
 
   return (
     <>
@@ -67,7 +69,6 @@ console.log(cards)
       solved={solved} />
     </>
   )
-  
 }
 
 
