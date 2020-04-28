@@ -1,0 +1,60 @@
+body {
+  background-image: url(../images/162297.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: auto;
+  width: auto;
+  height: 100%;
+}
+.box {
+  padding: 0px 10px 10px 10px;
+  margin: -1.8% 20% 1.5% 20%;
+  width: auto;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+}
+.board{
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap row;
+  padding: 40px 10px 20px 10px;
+}
+
+.flip-container {
+    perspective: 150px;
+    display: inline-block;
+    border: 1px solid transparent;
+    padding: 4px;
+  }
+  
+  .flip-container.flipped .flipper {
+    transform: rotateY(180deg);
+  }
+  
+  .flipper {
+    transition: 0.4s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+  
+  .front,
+  .back {
+    backface-visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+  
+  .back {
+    transform: rotateY(0deg);
+  }
+  
+  .front {
+    transform: rotateY(180deg);
+  }
+  .front-solved{
+    filter: opacity(.6) drop-shadow(1px 1px 1px rgb(179, 2, 2))
+  }

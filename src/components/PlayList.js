@@ -3,11 +3,10 @@ import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 
 const playlist = [
-  { name: "Saw", src: "https://www.cjoint.com/doc/20_04/JDulwZhNq7n_saw.mp3" },
-  {
-    name: "Freddy",
+  {name: "Freddy",
     src: "https://www.cjoint.com/doc/20_04/JDulyjmPOOn_freddy.mp3",
   },
+  { name: "Saw", src: "https://www.cjoint.com/doc/20_04/JDulwZhNq7n_saw.mp3" },
   {
     name: "Annabelle",
     src: "https://www.cjoint.com/doc/20_04/JDulzgSAu5n_annabelle.mp3",
@@ -58,6 +57,7 @@ class PlayList extends Component {
       <AudioPlayer
         className="audio"
         style={{ width: "400px", backgroundColor: "transparent" }}
+        autoPlay={true}
         autoPlayAfterSrcChange={true}
         showSkipControls={true}
         showJumpControls={false}
@@ -66,6 +66,7 @@ class PlayList extends Component {
         onClickNext={this.handleClickNext}
         customAdditionalControls={[]}
         layout="horizontal"
+        volume="0.2"
       />
     );
   }
