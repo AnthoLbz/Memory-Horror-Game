@@ -56,10 +56,9 @@ const App = () => {
 
  useEffect(()=>{
   timer(minutes,seconds)
- }, [])
+ },[])
  
   useEffect(() => {
-    
     getData()
   }, [])
   
@@ -75,7 +74,7 @@ const App = () => {
   const timer = (minutes,seconds) => {
       const interval = setInterval(() => {
       if (seconds > 0) {
-        setSeconds(seconds => seconds - 1)
+        setSeconds(seconds -= 1)
       }
       if (seconds === 0) {
         if (minutes === 0) {
