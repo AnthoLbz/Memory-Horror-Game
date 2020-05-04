@@ -11,11 +11,11 @@
 
  .timer {
     line-height: 30px;
-<<<<<<< HEAD
     width: 170px;
-=======
-    width: 80px;
->>>>>>> feature/usertimer
+    background-color: black;
+    color: #D40C22;
+    border: solid #D40C22 3px;
+    border-radius: 10%;
     background-color: black;
     color: #D40C22;
     border: solid #D40C22 3px;
