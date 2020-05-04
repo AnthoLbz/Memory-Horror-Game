@@ -3,6 +3,7 @@ import Board from './components/Board'
 import axios from 'axios'
 import shuffle from 'shuffle-array'
 import Timer from './components/Timer'
+import UserTimer from './components/UserTimer'
 import Counter from './components/Counter'
 import './App.css';
 import 'semantic-ui-css/semantic.min.css'
@@ -87,8 +88,7 @@ const App = () => {
     }, 1000)
   }
 
-//  console.log(cards)
-
+console.log(solved)
   return (
     <>
     <Board 
@@ -99,10 +99,10 @@ const App = () => {
       disabled={disabled}
       solved={solved}
       />
-    
     <Timer minutes={minutes}
       seconds={seconds}  />
     <Counter count={count} />
+    <UserTimer />
     </>
   );
 }
