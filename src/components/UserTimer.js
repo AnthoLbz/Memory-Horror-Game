@@ -76,7 +76,7 @@ class UserTimer extends React.Component {
         <div className="row">
           <div className="col-md-4"></div>
           <div className="col-md-4">
-            <Timer value={this.state.value} seconds={this.state.seconds} />
+            <ActiveTimer value={this.state.value} seconds={this.state.seconds} />
           </div>
         </div>
       </div>
