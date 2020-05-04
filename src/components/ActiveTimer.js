@@ -1,5 +1,5 @@
 import React from "react";
-import './Timer.css'
+import './ActiveTimer.css'
 
 class ActiveTimer extends React.Component {
     render() {

@@ -1,5 +1,5 @@
 import React from 'react';
-import Timer from './Timer';
+import ActiveTimer from './ActiveTimer';
 import TimerInput from './TimerInput';
 import StartButton from './StartButton';
 
