@@ -3,10 +3,15 @@ import "./landing.css";
 import Button from "./Buttons";
 import "./button.css";
 import { Link } from "react-router-dom";
+import PlayList from "./PlayList";
+
 
 const Landing = () => {
   return (
     <div className="landing">
+      <Link to="/" className="title">
+        Memory Horror Game
+      </Link>
       <h2 class="container">
         <p>Welcome to, The game....</p>
         <p>
@@ -36,9 +41,9 @@ const Landing = () => {
         </Button>
       </Link>
       <Link to="/videos" className="videos">
-        {" "}
         Videos
       </Link>
+      <PlayList />
     </div>
   );
 };

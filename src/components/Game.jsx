@@ -3,6 +3,7 @@ import Board from "./Board";
 import axios from "axios";
 import "./game.css";
 import { Link } from "react-router-dom";
+import PlayList from "./PlayList";
 // import shuffle from "shuffle-array";
 
 const Game = () => {
@@ -76,6 +77,9 @@ const Game = () => {
 
   return (
     <div className="background">
+      <Link to="/" className="title">
+        Memory Horror Game
+      </Link>
       <div className="box">
         <Board
           cards={cards}
@@ -86,6 +90,7 @@ const Game = () => {
           solved={solved}
         />
       </div>
+      <PlayList/>
     </div>
   );
 };

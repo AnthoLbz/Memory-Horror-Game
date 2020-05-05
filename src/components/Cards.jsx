@@ -29,6 +29,7 @@ function Card({
           className={flipped ? "front" : "back"}
           src={flipped || solved ? cardsFront : back}
           alt={id}
+          // eslint-disable-next-line react/jsx-no-duplicate-props
           className={solved ? "front-solved" : back}
         />
       </div>
