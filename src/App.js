@@ -5,6 +5,7 @@ import shuffle from 'shuffle-array'
 import Timer from './components/Timer'
 import UserTimer from './components/UserTimer'
 import Counter from './components/Counter'
+import ModalFinishGame from './components/ModalFinishGame'
 import './App.css';
 import 'semantic-ui-css/semantic.min.css'
 
@@ -42,6 +43,12 @@ const App = () => {
     }   
   }
   
+const finishGame = () => {
+  if (cards.length === solved.length) {
+    return <ModalFinishGame />
+  }
+}
+
  const resetCards = () => {
    setFlipped([])
    setDisabled(false)
@@ -91,6 +98,7 @@ const App = () => {
 console.log(solved)
   return (
     <>
+    {finishGame()}
     <Board 
       cards={cards} 
       cardsBack={cardsBack} 
