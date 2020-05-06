@@ -119,6 +119,7 @@ console.log(solved)
       <Counter count={count} />
       <UserTimer />
       <PlayList />
+      {finishGame()}
     </div>
   );
 };

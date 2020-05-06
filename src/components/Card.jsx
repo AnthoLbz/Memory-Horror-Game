@@ -11,15 +11,14 @@ function Card({ id, width, height, back,solved, cardsFront, flipped, handleClick
         onClick={() => (disabled ? null : handleClick(id))}
       >
         <div className="flipper">
-          <img
-            style={{
-              width,
-              height,
-            }}
-            className={flipped ? "front" : "back"}
-            src={flipped || solved ? cardsFront : back}
-            alt={id}
-          />
+            <img
+            alt='cards horror'
+                style={{
+                    width, height
+                }}
+                className={flipped ? 'front' : 'back'}
+                src={flipped || solved ? cardsFront : back }
+            />
         </div>
       </div>
     );
