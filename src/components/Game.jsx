@@ -44,9 +44,9 @@ const Game = () => {
   }
   
 const finishGame = () => {
-  if (cards.length === solved.length) {
+if (cards.length === solved.length) {
     return <ModalFinishGame />
-  }
+}
 }
 
  const resetCards = () => {
@@ -68,7 +68,7 @@ const finishGame = () => {
  
   useEffect(() => {
     getData()
-  }, [])
+  },[])
   
   const getData = () => {
     axios.get('https://horrormemo.herokuapp.com/memory')
