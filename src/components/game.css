@@ -11,7 +11,21 @@
   min-height: 100%;
   min-width: 100%;
 }
-
+.title {
+  background-image: url(https://media.giphy.com/media/LShzvtC3Ri1oO7TMHT/giphy.gif);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  color: transparent;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  font-size: 78px;
+  font-family: "Faceyourfears";
+  animation: filling 4s ease forwards;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
 .box {
   padding: 0px 10px 10px 10px;
   margin: -1.8% 20% 1.5% 20%;
@@ -49,9 +63,10 @@
   .back {
     backface-visibility: hidden;
     position: absolute;
-    left: 0;
+    left: -5px;
     top: 0;
     border-radius: 10px;
+    padding: 5px;
   }
   
   .back {
@@ -60,7 +75,8 @@
   
   .front {
     transform: rotateY(180deg);
+    
   }
-  .front-solved{
+  /* .front-solved{
     filter: opacity(.6) drop-shadow(1px 1px 1px rgb(179, 2, 2))
-  }
+  } */

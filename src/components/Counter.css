@@ -1,0 +1,26 @@
+.counterContainer > * {
+    font-family: 'MyHardboardCut';
+    font-size: 20px;
+}
+
+.counterContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+.counter {
+    line-height: 30px;
+    width: 170px;
+    margin-top: 0px;
+    background-color: black;
+    color: #D40C22;
+    border: solid #D40C22 3px;
+    border-radius: 10%;
+    font-weight: bold;
+    text-align: center;
+}

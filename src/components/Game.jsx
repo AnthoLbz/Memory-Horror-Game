@@ -1,85 +1,110 @@
-import React, { useState, useEffect } from "react";
-import Board from "./Board";
-import axios from "axios";
+import React, { useState, useEffect } from 'react';
+import Board from './Board'
+import axios from 'axios'
+import shuffle from 'shuffle-array'
+import Timer from './Timer'
+import UserTimer from './UserTimer'
+import Counter from './Counter'
+import ModalFinishGame from './ModalFinishGame'
+import 'semantic-ui-css/semantic.min.css'
 import "./game.css";
 import { Link } from "react-router-dom";
 import PlayList from "./PlayList";
-// import shuffle from "shuffle-array";
 
 const Game = () => {
-  const [cards, setCards] = useState([]);
-  const [cardsBack, setCardsBack] = useState([]);
-  const [flipped, setFlipped] = useState([]);
-  const [solved, setSolved] = useState([]);
-  const [disabled, setDisabled] = useState(false);
+  const [cards, setCards] = useState([])
+  const [cardsBack, setCardsBack] = useState([])
+  const [flipped, setFlipped] = useState([])
+  const [solved, setSolved] = useState([])
+  const [disabled, setDisabled] = useState(false)
+  const [count, setCount] = useState(0)
+  const [minutes, setMinutes] = useState(0)
+  const [seconds, setSeconds] = useState(10)
+  
+  const countMoves = (count) => {
+    setCount(count + 1)
+  }
 
   const handleClick = (id) => {
-    setDisabled(true);
-    if (flipped.length === 0) {
-      setFlipped([id]);
-      setDisabled(false);
+    setDisabled(true) 
+    if (flipped.length === 0) { 
+      setFlipped([id]) 
+      setDisabled(false) 
     } else {
-      if (sameCardClicked(id)) return;
-      setFlipped([flipped[0], id]);
-      if (isMatch(id)) {
-        setSolved([...solved, flipped[0], id]);
-        resetCards();
+      if (sameCardClicked(id)) return 
+        setFlipped([flipped[0], id])
+      if (isMatch(id)){
+        countMoves(count)
+        setSolved([...solved, flipped[0], id]) 
+        resetCards()
       } else {
-        setTimeout(resetCards, 1000);
+        countMoves(count)
+        setTimeout(resetCards, 1000)
       }
-    }
-  };
+    }   
+  }
+  
+const finishGame = () => {
+  if (cards.length === solved.length) {
+    return <ModalFinishGame />
+  }
+}
 
-  const resetCards = () => {
-    setFlipped([]);
-    setDisabled(false);
-  };
-  const sameCardClicked = (id) => flipped.includes(id);
+ const resetCards = () => {
+   setFlipped([])
+   setDisabled(false)
+ } 
 
-  const isMatch = (id) => {
-    const clickedCard = cards.find((card) => card.id === id);
-    const flippedCard = cards.find((card) => flipped[0] === card.id);
-    return flippedCard.name === clickedCard.name;
-  };
+ const sameCardClicked = (id) => flipped.includes(id) 
 
+ const isMatch = (id) => {
+  const clickedCard = cards.find(card => card.id === id) 
+  const flippedCard = cards.find(card => flipped[0] === card.id) 
+  return flippedCard.name === clickedCard.name
+ }
+
+ useEffect(()=>{
+  timer(minutes,seconds)
+ },[])
+ 
   useEffect(() => {
-    getData();
-  }, []);
-
+    getData()
+  }, [])
+  
   const getData = () => {
-    axios
-      .get("https://horrormemo.herokuapp.com/memory")
-      // .then(response => console.log(response.data))
-      .then((response) => {
-        setCards(
-          response.data
-            .filter((e) => e.id <= 10)
-            .reduce(
-              (res, current) => [
-                ...res,
-                current,
-                {
-                  id: current.id + 10,
-                  name: current.name,
-                  image: current.image,
-                },
-              ],
-              []
-            )
-        );
-        setCardsBack(
-          response.data.filter((e) => e.id === 27).map((e) => e.image)
-        );
-      });
-  };
+    axios.get('https://horrormemo.herokuapp.com/memory')
+        // .then(response => console.log(response.data))
+        .then(response => {
+          setCards(shuffle(shuffle(response.data.filter(e => e.id <= 19)).filter((e, index) => index < 10).reduce((res, current) => [...res, current, {id : current.id +20, name : current.name, image :current.image }],[])))
+          setCardsBack(response.data.filter(e => e.id === 27).map(e => e.image))
+        })
+      }
+  
+  const timer = (minutes,seconds) => {
+      const interval = setInterval(() => {
+      if (seconds > 0) {
+        setSeconds(seconds -= 1)
+      }
+      if (seconds === 0) {
+        if (minutes === 0) {
+         clearInterval(interval)
+        } else {
+            setMinutes(minutes - 1)
+            setSeconds(seconds = 59)
+        }
+      }
+    }, 1000)
+  }
 
-  console.log(cards);
+console.log(solved)
 
   return (
     <div className="background">
-      <Link to="/" className="title">
-        Memory Horror Game
-      </Link>
+      <div>
+        <Link to="/" className="title">
+          Memory Horror Game
+        </Link>
+      </div>
       <div className="box">
         <Board
           cards={cards}
@@ -90,7 +115,10 @@ const Game = () => {
           solved={solved}
         />
       </div>
-      <PlayList/>
+      <Timer minutes={minutes} seconds={seconds} />
+      <Counter count={count} />
+      <UserTimer />
+      <PlayList />
     </div>
   );
 };

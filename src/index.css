@@ -8,6 +8,11 @@
   src: local('Mukadua'), url(./fonts/Mukadua.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: 'MyHardboardCut';
+  src: local('MyHardboardCut'), url(./fonts/MyHardboardCut-JRmaK.otf)
+}
+
 body {
   background-color: black;
   margin: 0;
