@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 
+
 const playlist = [
   {name: "Freddy",
     src: "https://www.cjoint.com/doc/20_04/JDulyjmPOOn_freddy.mp3",

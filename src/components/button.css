@@ -85,7 +85,7 @@ a {
   border-radius: 10px;
   border:solid rgb(22, 22, 22);
   box-shadow: 0.2rem 0.1em rgb(26, 0, 0);
-  cursor: pointer;
+  cursor: url("../fonts/cursor/curseur-main-pointeur.png"),pointer;
   margin-right: auto;
   margin-left: auto;
   position: relative;

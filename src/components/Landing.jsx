@@ -40,7 +40,7 @@ const Landing = () => {
           ► Play
         </Button>
       </Link>
-      <Link to="/videos">
+      <Link to="/Videos">
         <p className="videos">Videos</p>
       </Link>
       <PlayList />
