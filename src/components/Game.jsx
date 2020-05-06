@@ -18,15 +18,34 @@ const Game = () => {
   const [solved, setSolved] = useState([])
   const [disabled, setDisabled] = useState(false)
   const [count, setCount] = useState(0)
-  const [minutes, setMinutes] = useState(0)
-  const [seconds, setSeconds] = useState(59)  
+  const [seconds, setSeconds] = useState(59);
+  const [isActive, setIsActive] = useState(true);
+  const [minutes, setMinutes] = useState(0) 
 
-  // const newGame = () => {
-  //   setSolved([]);
-  //   setCount(0);
-  //   shuffle(cards)
-  //   setSeconds(59)
-  // }
+  const newGame = () => {
+    setSolved([]);
+    setCount(0);
+    shuffle(cards)
+    reset()
+    setMinutes(0)
+  }
+
+   function reset() {
+     setSeconds(59);
+     setIsActive(true);
+   }
+
+   useEffect(() => {
+     let interval = null;
+     if (seconds > 0) {
+       interval = setInterval(() => {
+         setSeconds((seconds) => (seconds -= 1));
+       }, 1000);
+     } else if (!isActive && seconds === 0) {
+       clearInterval(interval);
+     }
+     return () => clearInterval(interval);
+   }, [isActive, seconds]);
 
   const countMoves = (count) => {
     setCount(count + 1)
@@ -52,11 +71,8 @@ const Game = () => {
   }
   
 const finishGame = () => {
-  function refreshPage() {
-    window.location.reload(false);
-  }
   if (solved.length === cards.length) {
-    return <ModalFinishGame count={count} resetGame={refreshPage} />
+    return <ModalFinishGame count={count} resetGame={newGame} />
   }
 }
 
@@ -73,10 +89,6 @@ const finishGame = () => {
   return flippedCard.name === clickedCard.name
  }
 
- useEffect(()=>{
-  timer(minutes, seconds)
- }, [])
- 
   useEffect(() => {
     getData()
   }, [])
@@ -90,22 +102,6 @@ const finishGame = () => {
         })
       }
   
-  const timer = (minutes,seconds) => {
-      const interval = setInterval(() => {
-      if (seconds > 0) {
-        setSeconds(seconds -= 1)
-      }
-      if (seconds === 0) {
-        if (minutes === 0 || solved.length === 2) {
-         clearInterval(interval)
-        } else {
-            setMinutes(minutes - 1)
-            setSeconds(seconds = 59)
-        }
-      }
-    }, 1000)
-  }
-
 console.log(solved)
 
   return (
