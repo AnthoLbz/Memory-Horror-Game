@@ -10,6 +10,7 @@ function Card({ id, width, height, back,solved, cardsFront, flipped, handleClick
         >
         <div className="flipper">
             <img
+            alt='cards horror'
                 style={{
                     width, height
                 }}

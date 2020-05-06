@@ -1,20 +1,21 @@
 import React from 'react'
-import { Button, Header, Icon, Modal } from 'semantic-ui-react'
+//import { Link } from 'react-router-dom'
+import { Button, Modal } from 'semantic-ui-react'
+import './modalFinishGame.css'
 
-const ModalFinishGame = () => (
+
+const ModalFinishGame = ({count}) => (
     <Modal open= 'true' basic size='small'>
-      <Header icon='archive' content='Archive Old Messages' />
-      <Modal.Content>
-        <p>
-          You win !!!
-        </p>
+      <Modal.Content >
+        <h1>You escaped !!!</h1>
+        <h3>You clicked {count} times</h3>
       </Modal.Content>
       <Modal.Actions>
-        <Button basic color='red' inverted>
-          <Icon name='remove' /> No
-        </Button>
+          <Button basic color='red' inverted>
+            Home
+          </Button>
         <Button color='green' inverted>
-          <Icon name='checkmark' /> Yes
+          Play again
         </Button>
       </Modal.Actions>
     </Modal>
