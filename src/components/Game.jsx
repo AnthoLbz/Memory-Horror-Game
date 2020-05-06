@@ -19,8 +19,15 @@ const Game = () => {
   const [disabled, setDisabled] = useState(false)
   const [count, setCount] = useState(0)
   const [minutes, setMinutes] = useState(0)
-  const [seconds, setSeconds] = useState(10)
-  
+  const [seconds, setSeconds] = useState(59)  
+
+  // const newGame = () => {
+  //   setSolved([]);
+  //   setCount(0);
+  //   shuffle(cards)
+  //   setSeconds(59)
+  // }
+
   const countMoves = (count) => {
     setCount(count + 1)
   }
@@ -45,8 +52,11 @@ const Game = () => {
   }
   
 const finishGame = () => {
-  if (cards.length === solved.length) {
-    return <ModalFinishGame />
+  function refreshPage() {
+    window.location.reload(false);
+  }
+  if (solved.length === 2) {
+    return <ModalFinishGame count={count} resetGame={refreshPage} />
   }
 }
 
@@ -64,8 +74,8 @@ const finishGame = () => {
  }
 
  useEffect(()=>{
-  timer(minutes,seconds)
- },[])
+  timer(minutes, seconds)
+ }, [])
  
   useEffect(() => {
     getData()
@@ -86,7 +96,7 @@ const finishGame = () => {
         setSeconds(seconds -= 1)
       }
       if (seconds === 0) {
-        if (minutes === 0) {
+        if (minutes === 0 || solved.length === 2) {
          clearInterval(interval)
         } else {
             setMinutes(minutes - 1)
@@ -118,7 +128,7 @@ console.log(solved)
       <Timer minutes={minutes} seconds={seconds} />
       <Counter count={count} />
       <UserTimer />
-      <PlayList />
+      <PlayList/>
       {finishGame()}
     </div>
   );
