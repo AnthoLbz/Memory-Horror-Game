@@ -55,7 +55,7 @@ const finishGame = () => {
   function refreshPage() {
     window.location.reload(false);
   }
-  if (solved.length === 2) {
+  if (solved.length === cards.length) {
     return <ModalFinishGame count={count} resetGame={refreshPage} />
   }
 }
