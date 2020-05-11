@@ -1,0 +1,38 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import { Button, Modal } from "semantic-ui-react";
+import "./modalGameOver.css";
+
+const ModalGameOver = ({ resetGame }) => (
+  <Modal className="bgOver" open="true" basic size="small">
+    <Modal.Content>
+      <h1 className="gameOver">The game is over for you ...</h1>
+    </Modal.Content>
+    <Modal.Actions>
+      <Link to="/">
+        <Button className="home">Home</Button>
+      </Link>
+      <Link to="/Game">
+        <Button className="reset" onClick={resetGame}>
+          Try Again ?
+        </Button>
+      </Link>
+    </Modal.Actions>
+  </Modal>
+);
+
+export default ModalGameOver;
+
+
+
+.ui.dimmer{
+    background-image: url(https://thumbs.gfycat.com/GreatLividBighornsheep-size_restricted.gif);  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+}
+
+.gameOver{
+    font-family: "Faceyourfears";
+}

@@ -5,7 +5,6 @@ import "./button.css";
 import { Link } from "react-router-dom";
 import PlayList from "./PlayList";
 
-
 const Landing = () => {
   return (
     <div className="landing">
@@ -40,10 +39,14 @@ const Landing = () => {
           ► Play
         </Button>
       </Link>
-      <Link to="/Videos">
-        <p className="videos">Videos</p>
-      </Link>
-      <PlayList />
+      <div className="videos">
+        <Link to="/Videos">
+          <p>Videos</p>
+        </Link>
+      </div>
+      <div className="playlist">
+        <PlayList />
+      </div>
     </div>
   );
 };

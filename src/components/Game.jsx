@@ -6,6 +6,7 @@ import Timer from './Timer'
 import UserTimer from './UserTimer'
 import Counter from './Counter'
 import ModalFinishGame from './ModalFinishGame'
+import ModalGameOver from './ModalGameOver'
 import 'semantic-ui-css/semantic.min.css'
 import "./game.css";
 import { Link } from "react-router-dom";
@@ -19,9 +20,11 @@ const Game = () => {
   const [disabled, setDisabled] = useState(false)
   const [count, setCount] = useState(0)
   const [seconds, setSeconds] = useState(59);
-  const [isActive, setIsActive] = useState(true);
+  const [isActive, setIsActive] = useState(false);
   const [minutes, setMinutes] = useState(0) 
 
+
+  
   const newGame = () => {
     setSolved([]);
     setCount(0);
@@ -70,9 +73,23 @@ const Game = () => {
     }   
   }
   
-const finishGame = () => {
-  if (solved.length === cards.length) {
-    return <ModalFinishGame count={count} resetGame={newGame} />
+// const finishGame = () => {
+//   if (solved.length === cards.length) {
+//     return <ModalFinishGame count={count} resetGame={newGame} />
+//   }
+// }
+// const gameOver =() =>{
+//   if ((minutes ===0) && (seconds === 0)){
+//     return <ModalGameOver resetGame={newGame} />
+//   }
+// }
+
+const chooseModal =() =>{
+   if (solved.length === 2) {
+     return <ModalFinishGame count={count} resetGame={newGame} />;
+   }
+   else if ((minutes ===0) && (seconds === 0)){
+    return <ModalGameOver resetGame={newGame} />
   }
 }
 
@@ -124,8 +141,9 @@ console.log(solved)
       <Timer minutes={minutes} seconds={seconds} />
       <Counter count={count} />
       <UserTimer />
-      <PlayList/>
-      {finishGame()}
+      {/* <PlayList /> */}
+      {chooseModal()}
+      {}
     </div>
   );
 };

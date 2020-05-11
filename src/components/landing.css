@@ -7,18 +7,25 @@
   }
 }
 
-.landing{
+.landing {
   background-image: url(../images/landing.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  background-attachment: fixed;
+  display: flex;
+  flex-flow: wrap column;
+  z-index: 20;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
   min-height: 100%;
   min-width: 100%;
-  cursor: url("../fonts/cursor/curseur-souris.png"),pointer;
+  cursor: url("../fonts/cursor/curseur-souris.png"), pointer;
 }
 .title {
   background-image: url(https://media.giphy.com/media/LShzvtC3Ri1oO7TMHT/giphy.gif);
@@ -43,13 +50,13 @@
   color: white;
   font-size: 24px;
   font-weight: 50;
-  font-family: 'Mukadua';
+  font-family: "Mukadua";
 }
 .play {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  cursor: url("../fonts/cursor/curseur-main-pointeur.png"),pointer;
+  cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
 }
 .videos {
   color: black;
@@ -60,5 +67,9 @@
   justify-content: center;
   transition: 0.8s;
   margin-top: 20px;
-  cursor: url("../fonts/cursor/curseur-main-pointeur.png"),pointer;
+  cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
+}
+.playlist {
+ margin-left: -70%;
+ margin-top: -3%;
 }

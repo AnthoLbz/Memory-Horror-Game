@@ -1,27 +1,29 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Button, Modal } from 'semantic-ui-react'
+import { Modal } from 'semantic-ui-react'
 import './modalFinishGame.css'
 
-const ModalFinishGame = ({count,resetGame}) => (
-    <Modal open='true' basic size='small'>
-      <Modal.Content >
+const ModalFinishGame = ({ count, resetGame }) => (
+  <Modal className="bgFinish" open="true" basic size="small">
+    <Modal.Content>
+      <div className="Finish">
         <h1>You escaped !!!</h1>
         <h3>You clicked {count} times</h3>
-      </Modal.Content>
-      <Modal.Actions>
+      </div>
+    </Modal.Content>
+    <Modal.Actions>
+      <div className="altFinish">
         <Link to="/">
-          <Button className="home">
-            Home
-          </Button>
+          <button className="homeFinish">Home</button>
         </Link>
         <Link to="/Game">
-          <Button className="reset" onClick={resetGame}>
+          <button className="resetGame" onClick={resetGame}>
             ► Play Again
-          </Button>
+          </button>
         </Link>
-      </Modal.Actions>
-    </Modal>
-  )
+      </div>
+    </Modal.Actions>
+  </Modal>
+);
 
   export default ModalFinishGame

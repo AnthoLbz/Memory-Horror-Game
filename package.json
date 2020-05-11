@@ -9,6 +9,7 @@
     "axios": "^0.19.2",
     "hover.css": "^2.3.2",
     "react": "^16.13.1",
+    "react-cool-portal": "^1.0.8",
     "react-dom": "^16.13.1",
     "react-glitch-effect": "^2.0.2",
     "react-h5-audio-player": "^3.0.5",
