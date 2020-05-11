@@ -14,6 +14,7 @@ import PlayList from "./PlayList";
 const Game = () => {
   const [cards, setCards] = useState([])
   const [cardsBack, setCardsBack] = useState([])
+  const [cardAlmostCaught, setCardAlmostCaught] = useState([])
   const [flipped, setFlipped] = useState([])
   const [solved, setSolved] = useState([])
   const [disabled, setDisabled] = useState(false)
@@ -21,6 +22,7 @@ const Game = () => {
   const [seconds, setSeconds] = useState(59);
   const [isActive, setIsActive] = useState(true);
   const [minutes, setMinutes] = useState(0) 
+  
 
   const newGame = () => {
     setSolved([]);
@@ -70,11 +72,11 @@ const Game = () => {
     }   
   }
   
-const finishGame = () => {
-  if (solved.length === cards.length) {
-    return <ModalFinishGame count={count} resetGame={newGame} />
+  const finishGame = () => {
+    if (solved.length === cards.length) {
+      return <ModalFinishGame count={count} resetGame={newGame} />
+    }
   }
-}
 
  const resetCards = () => {
    setFlipped([])
@@ -92,17 +94,19 @@ const finishGame = () => {
   useEffect(() => {
     getData()
   }, [])
-  
+
   const getData = () => {
     axios.get('https://horrormemo.herokuapp.com/memory')
         // .then(response => console.log(response.data))
         .then(response => {
-          setCards(shuffle(shuffle(response.data.filter(e => e.id <= 19)).filter((e, index) => index < 10).reduce((res, current) => [...res, current, {id : current.id +20, name : current.name, image :current.image }],[])))
-          setCardsBack(response.data.filter(e => e.id === 27).map(e => e.image))
-        })
+          setCards(shuffle(shuffle(response.data
+            .filter(e => e.id <= 19))
+              .filter((e, index) => index < 10)
+              .reduce((res, current) => [...res, current, {id : current.id + 30, name : current.name, image :current.image }],[])
+            .concat(response.data.filter(e => e.id === 26))),
+          setCardsBack(response.data.filter(e => e.id === 27).map(e => e.image)),
+      )})
       }
-  
-console.log(solved)
 
   return (
     <div className="background">
@@ -123,8 +127,8 @@ console.log(solved)
       </div>
       <Timer minutes={minutes} seconds={seconds} />
       <Counter count={count} />
-      <UserTimer />
-      <PlayList/>
+       <UserTimer /> 
+      {/* <PlayList/> */}
       {finishGame()}
     </div>
   );

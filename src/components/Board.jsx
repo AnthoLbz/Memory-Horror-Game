@@ -1,8 +1,6 @@
 import React from 'react';
 import Card from './Card'
 
-
-
 function Board ({cards, cardsBack, flipped, handleClick, disabled, solved }) {
     return(
         <div className='board'>
