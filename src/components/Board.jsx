@@ -1,11 +1,12 @@
 import React from 'react';
 import Card from './Card'
 
-function Board ({cards, cardsBack, flipped, handleClick, disabled, solved }) {
+function Board ({cards, cardsBack, flipped, handleClick, disabled, solved, bonus }) {
     return(
         <div className='board'>
             {cards.map((card) => (
                 <Card
+                    bonus={bonus.includes(card.id)}
                     id={card.id}
                     width={120}
                     height={170}

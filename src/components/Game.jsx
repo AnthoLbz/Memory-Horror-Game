@@ -17,6 +17,7 @@ const Game = () => {
   const [cardAlmostCaught, setCardAlmostCaught] = useState([])
   const [flipped, setFlipped] = useState([])
   const [solved, setSolved] = useState([])
+  const [bonus, setBonus] = useState([])
   const [disabled, setDisabled] = useState(false)
   const [count, setCount] = useState(0)
   const [seconds, setSeconds] = useState(59);
@@ -30,6 +31,7 @@ const Game = () => {
     shuffle(cards)
     reset()
     setMinutes(0)
+    setBonus([])
   }
 
    function reset() {
@@ -37,17 +39,17 @@ const Game = () => {
      setIsActive(true);
    }
 
-   useEffect(() => {
-     let interval = null;
-     if (seconds > 0) {
-       interval = setInterval(() => {
-         setSeconds((seconds) => (seconds -= 1));
-       }, 1000);
-     } else if (!isActive && seconds === 0) {
-       clearInterval(interval);
-     }
-     return () => clearInterval(interval);
-   }, [isActive, seconds]);
+  //  useEffect(() => {
+  //    let interval = null;
+  //    if (seconds > 0) {
+  //      interval = setInterval(() => {
+  //        setSeconds((seconds) => (seconds -= 1));
+  //      }, 1000);
+  //    } else if (!isActive && seconds === 0) {
+  //      clearInterval(interval);
+  //    }
+  //    return () => clearInterval(interval);
+  //  }, [isActive, seconds]);
 
   const countMoves = (count) => {
     setCount(count + 1)
@@ -58,12 +60,24 @@ const Game = () => {
     if (flipped.length === 0) { 
       setFlipped([id]) 
       setDisabled(false) 
-    } else {
+      if((id>21)&&(id<27)){
+        countMoves(count)
+        setBonus([...bonus,id])
+        setDisabled(true) 
+        resetCards()
+      }
+    } 
+    else {
       if (sameCardClicked(id)) return 
         setFlipped([flipped[0], id])
       if (isMatch(id)){
         countMoves(count)
         setSolved([...solved, flipped[0], id]) 
+        resetCards()}
+      if ((id>21)&&(id<27)){
+        countMoves(count)
+        setBonus([...bonus,id])
+        setDisabled(true) 
         resetCards()
       } else {
         countMoves(count)
@@ -73,7 +87,7 @@ const Game = () => {
   }
   
   const finishGame = () => {
-    if (solved.length === cards.length) {
+    if (solved.length === cards.length - 3) {
       return <ModalFinishGame count={count} resetGame={newGame} />
     }
   }
@@ -103,10 +117,15 @@ const Game = () => {
             .filter(e => e.id <= 19))
               .filter((e, index) => index < 10)
               .reduce((res, current) => [...res, current, {id : current.id + 30, name : current.name, image :current.image }],[])
-            .concat(response.data.filter(e => e.id === 26))),
+            .concat(response.data.filter(e => e.id === 26 || e.id === 22 || e.id === 24))),
           setCardsBack(response.data.filter(e => e.id === 27).map(e => e.image)),
       )})
       }
+
+  console.log(flipped.length)
+  console.log(disabled)
+  console.log(flipped)
+  console.log(cards)
 
   return (
     <div className="background">
@@ -123,6 +142,7 @@ const Game = () => {
           handleClick={handleClick}
           disabled={disabled}
           solved={solved}
+          bonus={bonus}
         />
       </div>
       <Timer minutes={minutes} seconds={seconds} />
@@ -135,4 +155,4 @@ const Game = () => {
 };
 
 
-export default Game;
+export default Game
