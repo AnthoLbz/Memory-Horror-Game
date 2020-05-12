@@ -1,14 +1,11 @@
 import React from "react";
-import "./landing.css";
-import Button from "./Buttons";
-import "./button.css";
 import { Link } from "react-router-dom";
 import PlayList from "./PlayList";
 
-const Landing = () => {
+const Contact = () => {
   return (
     <div className="landing">
-      <Link to="/" className="landingTitle">
+      <Link to="/" className="title">
         Memory Horror Game
       </Link>
       <h2 className="container">
@@ -29,22 +26,10 @@ const Landing = () => {
         </p>
       </h2>
       <Link to="/Game">
-        <Button
-          class="play"
-          type="button"
-          buttonSize="btn--game"
-          buttonStyle="btn--play--solid"
-          onClick
-        >
-          ► Play
-        </Button>
       </Link>
-      <div className="footer">
+      <div className="videos">
         <Link to="/Videos">
           <p>Videos</p>
-        </Link>
-        <Link to="/Contact">
-          <p>About us</p>
         </Link>
       </div>
       <div className="playlist">
@@ -53,4 +38,4 @@ const Landing = () => {
     </div>
   );
 };
-export default Landing;
+export default Contact;

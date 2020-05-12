@@ -22,7 +22,7 @@
     }
   }
 
-.title {
+.videoTitle {
   cursor: url("../fonts/cursor/curseur-main-pointeur.png"),pointer;
   background-image: url(https://media.giphy.com/media/LShzvtC3Ri1oO7TMHT/giphy.gif);
   -webkit-text-fill-color: transparent;
@@ -33,6 +33,8 @@
   animation: filling 4s ease forwards;
   display: flex;
   justify-content: center;
+  padding-top: 60px;
+  padding-bottom: 15px;
 }
 
 .VideoPlayer{

@@ -20,7 +20,7 @@ const VideoPlayer =() =>{
 
     return (
       <div className="Body1">
-        <Link to="/" className="title">
+        <Link to="/" className="videoTitle">
           Memory Horror Game
         </Link>
         <div className="Body">

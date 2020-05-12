@@ -175,7 +175,7 @@ const jumpScare = () => {
   return (
     <div className="background">
       <div>
-        <Link to="/" className="title">
+        <Link to="/" className="gameTitle">
           Memory Horror Game
         </Link>
       </div>
