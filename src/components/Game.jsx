@@ -102,7 +102,6 @@ const Game = () => {
     }   
   }
 
-  
   const finishGame = () => {
     if (solved.length === cards.length - 3) {
       return <ModalFinishGame count={count} resetGame={newGame} />
