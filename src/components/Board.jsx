@@ -14,7 +14,7 @@ function Board ({cards, cardsBack, flipped, handleClick, disabled, solved, bonus
                     cardsFront={card.image}
                     flipped={flipped.includes(card.id)}
                     handleClick={handleClick}
-                    disabled={disabled || solved.includes(card.id)}
+                    disabled={disabled || solved.includes(card.id) || bonus.includes(card.id)}
                     solved={solved.includes(card.id)}
                     {...card}
                 />       

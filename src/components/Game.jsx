@@ -6,6 +6,7 @@ import Timer from './Timer'
 import UserTimer from './UserTimer'
 import Counter from './Counter'
 import ModalFinishGame from './ModalFinishGame'
+import ModalAlmostCaught from './ModalAlmostCaught'
 import 'semantic-ui-css/semantic.min.css'
 import "./game.css";
 import { Link } from "react-router-dom";
@@ -14,7 +15,6 @@ import PlayList from "./PlayList";
 const Game = () => {
   const [cards, setCards] = useState([])
   const [cardsBack, setCardsBack] = useState([])
-  const [cardAlmostCaught, setCardAlmostCaught] = useState([])
   const [flipped, setFlipped] = useState([])
   const [solved, setSolved] = useState([])
   const [bonus, setBonus] = useState([])
@@ -23,7 +23,7 @@ const Game = () => {
   const [seconds, setSeconds] = useState(59);
   const [isActive, setIsActive] = useState(true);
   const [minutes, setMinutes] = useState(0) 
-  
+  const [viewModalAlmost, setViewModalAlmost] = useState(false)
 
   const newGame = () => {
     setSolved([]);
@@ -60,11 +60,19 @@ const Game = () => {
     if (flipped.length === 0) { 
       setFlipped([id]) 
       setDisabled(false) 
-      if((id>21)&&(id<27)){
+      if((id>=21 && id<26) && (id===27)){
         countMoves(count)
         setBonus([...bonus,id])
         setDisabled(true) 
         resetCards()
+      }
+      if (id === 26){
+        setViewModalAlmost(true)
+        setCount(count-2)
+        setBonus([...bonus,id])
+        setDisabled(true) 
+        resetCards()
+        setTimeout(()=>setViewModalAlmost(false),2000)
       }
     } 
     else {
@@ -74,17 +82,26 @@ const Game = () => {
         countMoves(count)
         setSolved([...solved, flipped[0], id]) 
         resetCards()}
-      if ((id>21)&&(id<27)){
+      if((id>=21 && id<26) && (id===27)){
         countMoves(count)
         setBonus([...bonus,id])
         setDisabled(true) 
         resetCards()
+      } 
+      if (id === 26){
+        setViewModalAlmost(true)
+        setCount(count-2)
+        setBonus([...bonus,id])
+        setDisabled(true) 
+        resetCards()
+        setTimeout(()=>setViewModalAlmost(false),2000)
       } else {
         countMoves(count)
         setTimeout(resetCards, 1000)
       }
     }   
   }
+
   
   const finishGame = () => {
     if (solved.length === cards.length - 3) {
@@ -147,9 +164,10 @@ const Game = () => {
       </div>
       <Timer minutes={minutes} seconds={seconds} />
       <Counter count={count} />
-       <UserTimer /> 
+      <UserTimer /> 
       {/* <PlayList/> */}
       {finishGame()}
+      {viewModalAlmost ? <ModalAlmostCaught/> : null}
     </div>
   );
 };
