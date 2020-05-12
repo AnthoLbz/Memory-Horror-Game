@@ -2,6 +2,7 @@
     font-family: 'MyHardboardCut';
     font-size: 20px;
     cursor: url("../fonts/cursor/curseur-souris.png"),pointer;
+    color: white;
 }
  
 .timerContainer {
@@ -13,7 +14,7 @@
 
  .timer {
     line-height: 30px;
-    width: 170px;
+    width: 100px;
     background-color: black;
     color: #D40C22;
     border: solid #D40C22 3px;

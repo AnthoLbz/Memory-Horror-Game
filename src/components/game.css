@@ -35,7 +35,7 @@
 }
 .box {
   padding: 0px 10px 10px 10px;
-  margin: -1.8% 20% 1.5% 20%;
+  margin: -25% 15% 1.5% 15%;
   width: auto;
   height: auto;
   background-color: rgba(0, 0, 0, 0.3);
@@ -46,7 +46,7 @@
   display: flex;
   justify-content: center;
   flex-flow: wrap row;
-  padding: 40px 10px 20px 10px;
+  padding: 10px 10px 20px 10px;
 }
 
 .flip-container {
@@ -84,6 +84,10 @@
     transform: rotateY(180deg);
     
   }
-  /* .front-solved{
-    filter: opacity(.6) drop-shadow(1px 1px 1px rgb(179, 2, 2))
-  } */
+.outerBox{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 10%;
+  margin-left: 5%;
+}

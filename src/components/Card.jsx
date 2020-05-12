@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Card({ id, width, height, back,solved, cardsFront, flipped, handleClick, disabled }) {
+function Card({ id, width, height, back, solved, cardsFront, flipped, handleClick, disabled, bonus }) {
     return (
       <div
         className={`flip-container ${flipped ? "flipped" : ""}`}
@@ -15,9 +15,9 @@ function Card({ id, width, height, back,solved, cardsFront, flipped, handleClick
             alt='cards horror'
                 style={{
                     width, height
-                }}
+                }} 
                 className={flipped ? 'front' : 'back'}
-                src={flipped || solved ? cardsFront : back }
+                src={flipped || solved || bonus ? cardsFront : back }
             />
         </div>
       </div>
