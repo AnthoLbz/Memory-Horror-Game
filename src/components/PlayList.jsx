@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
+import shuffle from "shuffle-array";
 
-
-const playlist = [
+const playlist =  shuffle([
   {name: "Freddy",
     src: "https://www.cjoint.com/doc/20_04/JDulyjmPOOn_freddy.mp3",
   },
@@ -24,7 +24,7 @@ const playlist = [
     name: "Halloween",
     src: "https://www.cjoint.com/doc/20_04/JDulBV8rW0n_halloween.mp3",
   },
-];
+]);
 
 class PlayList extends Component {
   constructor(props) {
@@ -59,6 +59,7 @@ class PlayList extends Component {
         className="audio"
         style={{ width: "400px", backgroundColor: "transparent" }}
         autoPlay={true}
+        shuffle={true}
         autoPlayAfterSrcChange={true}
         showSkipControls={true}
         showJumpControls={false}
