@@ -20,9 +20,9 @@ const Game = () => {
   const [bonus, setBonus] = useState([])
   const [disabled, setDisabled] = useState(false)
   const [count, setCount] = useState(0)
-  const [seconds, setSeconds] = useState(59);
+  const [seconds, setSeconds] = useState(10);
   const [isActive, setIsActive] = useState(true);
-  const [minutes, setMinutes] = useState(0) 
+  const [minutes, setMinutes] = useState(1) 
   const [viewModalAlmost, setViewModalAlmost] = useState(false)
 
   const newGame = () => {
@@ -30,33 +30,40 @@ const Game = () => {
     setCount(0);
     shuffle(cards)
     reset()
-    setMinutes(0)
+    setMinutes(1)
+    setSeconds(10)
     setBonus([])
   }
 
    function reset() {
-     setSeconds(59);
+     setMinutes(1)
+     setSeconds(10);
      setIsActive(true);
    }
 
-  //  useEffect(() => {
-  //    let interval = null;
-  //    if (seconds > 0) {
-  //      interval = setInterval(() => {
-  //        setSeconds((seconds) => (seconds -= 1));
-  //      }, 1000);
-  //    } else if (!isActive && seconds === 0) {
-  //      clearInterval(interval);
-  //    }
-  //    return () => clearInterval(interval);
-  //  }, [isActive, seconds]);
+  useEffect(() => {
+    let interval = null;
+    if (seconds > 0) {
+      interval = setInterval(() => {
+        setSeconds((seconds) => (seconds -= 1));
+      }, 1000);
+    }
+    if (minutes === 1 && seconds === 0) {
+      setMinutes((minutes) => minutes - 1);
+      setSeconds((seconds) => (seconds = 59));
+    } else if (!isActive && seconds === 0) {
+      clearInterval(interval);
+    }
+    return () => clearInterval(interval);
+  }, [isActive, seconds, minutes]);
+
 
   const countMoves = (count) => {
     setCount(count + 1)
   }
 
   const handleClick = (id) => {
-    setDisabled(true) 
+    //setDisabled(true) 
     if (flipped.length === 0) { 
       setFlipped([id]) 
       setDisabled(false) 
@@ -74,14 +81,14 @@ const Game = () => {
         resetCards()
         setTimeout(()=>setViewModalAlmost(false),2000)
       }
-    } 
-    else {
+    } else {
       if (sameCardClicked(id)) return 
         setFlipped([flipped[0], id])
       if (isMatch(id)){
         countMoves(count)
         setSolved([...solved, flipped[0], id]) 
-        resetCards()}
+        resetCards()
+      }
       if((id>=21 && id<26) && (id===27)){
         countMoves(count)
         setBonus([...bonus,id])
@@ -138,10 +145,10 @@ const Game = () => {
       )})
       }
 
-  console.log(flipped.length)
-  console.log(disabled)
-  console.log(flipped)
+
   console.log(cards)
+  console.log(flipped)
+  console.log(disabled)
 
   return (
     <div className="background">
