@@ -1,0 +1,129 @@
+:root {
+  --easy: #e60000;
+  --medium: #ac0000;
+  --hard: #880000;
+  --return: #fdfdfd;
+}
+.btn {
+  font-family: "Faceyourfears";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.8s;
+  margin: 20px;
+}
+a {
+  font-family: "Faceyourfears";
+  font-size: 30px;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+/*button styles */
+.btn--easy--solid {
+  color: black;
+  border: none;
+  background: -webkit-linear-gradient(rgb(86, 87, 84) 50%, var(--easy) 50%);
+  opacity: 70%;
+  background-size: 200px 120px;
+  position: relative;
+  left:80% ;
+}
+.btn--easy--solid:hover {
+  background-position: 0 -60px;
+  color: var(--return);
+}
+.btn--medium--solid {
+  color: black;
+  border: none;
+  background: -webkit-linear-gradient(rgb(86, 87, 84) 50%, var(--medium) 50%);
+  opacity: 70%;
+  background-size: 200px 120px;
+  position: relative;
+  left:80% ;
+}
+.btn--medium--solid:hover {
+  background-position: 0 -60px;
+  color: var(--return);
+}
+.btn--hard--solid {
+  color: black;
+  border: none;
+  background: -webkit-linear-gradient(rgb(86, 87, 84) 50%, var(--hard) 50%);
+  opacity: 70%;
+  background-size: 200px 120px;
+  position: relative;
+  left:80% ;
+}
+.btn--hard--solid:hover {
+  background-position: 0 -60px;
+  color: var(--return);
+}
+.btn--return--solid {
+  color: black;
+  border: none;
+  background: -webkit-linear-gradient(0deg, var(--hard) 50%, transparent 50%);
+  background-size: 470px 120px;
+}
+
+.btn--return--solid:hover {
+  background-position: -235px 0;
+  color: var(--return);
+}
+.btn--play--solid{
+  text-align: center;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 50px;
+  opacity: 90%;
+  background-color: rgb(59, 59, 59);
+  text-shadow: -2px -2px rgb(2, 0, 0), 2px 2px rgb(92, 2, 2);
+  color: var(--hard);
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 10px;
+  border:solid rgb(22, 22, 22);
+  box-shadow: 0.2rem 0.1em rgb(26, 0, 0);
+  cursor: url("../fonts/cursor/curseur-main-pointeur.png"),pointer;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.btn--play--solid:active{
+  box-shadow: none;
+  position: relative;
+  top: 0.2em;
+}
+.btn--play--solid:hover{
+  color: grey;
+  background-image: url(https://media2.giphy.com/media/f4IjBQupqojhqQzKk2/giphy.webp?cid=ecf05e47359f10b3851c1e1b53bf759f3008f6e36842309d&rid=giphy.webp);
+
+}
+
+/*button size */
+
+.btn--medium {
+  padding: 10px 20px;
+  font-size: 18px;
+  width: 235px;
+}
+
+.btn--large {
+  padding: 15px 30px;
+  font-size: 20px;
+  width: 160px;
+}
+
+.btn--game {
+  margin: 5px;
+  height: 100px;
+  width: 250px;
+  padding: 10px 0 10px 10px;
+}
+
+.btn--game :active {
+  box-shadow: none;
+  position: relative;
+  top: 0.2em;
+}
