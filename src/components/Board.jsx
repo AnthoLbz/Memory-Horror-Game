@@ -6,6 +6,7 @@ function Board ({cards, cardsBack, flipped, handleClick, disabled, solved, bonus
         <div className='board'>
             {cards.map((card) => (
                 <Card
+                    key={card.id}
                     bonus={bonus.includes(card.id)}
                     id={card.id}
                     width={120}
@@ -14,7 +15,7 @@ function Board ({cards, cardsBack, flipped, handleClick, disabled, solved, bonus
                     cardsFront={card.image}
                     flipped={flipped.includes(card.id)}
                     handleClick={handleClick}
-                    disabled={disabled || solved.includes(card.id)}
+                    disabled={disabled || solved.includes(card.id) || bonus.includes(card.id)}
                     solved={solved.includes(card.id)}
                     {...card}
                 />       
