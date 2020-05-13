@@ -20,17 +20,17 @@ const Game = () => {
   const [bonus, setBonus] = useState([]);
   const [disabled, setDisabled] = useState(false);
   const [count, setCount] = useState(0);
-  const [seconds, setSeconds] = useState(59);
+  const [seconds, setSeconds] = useState(10);
   const [isActive, setIsActive] = useState(false);
-  const [minutes, setMinutes] = useState(0);
-  const [viewScare, setViewScare] = useState(false)
+  const [minutes, setMinutes] = useState(1);
+  const [viewScare, setViewScare] = useState(false);
 
   const newGame = () => {
     setSolved([]);
     setCount(0);
     shuffle(cards);
     reset();
-    setMinutes(0);
+    setMinutes(1);
     setBonus([]);
   };
 
@@ -39,17 +39,21 @@ const Game = () => {
     setIsActive(true);
   }
 
-  //  useEffect(() => {
-  //    let interval = null;
-  //    if (seconds > 0) {
-  //      interval = setInterval(() => {
-  //        setSeconds((seconds) => (seconds -= 1));
-  //      }, 1000);
-  //    } else if (!isActive && seconds === 0) {
-  //      clearInterval(interval);
-  //    }
-  //    return () => clearInterval(interval);
-  //  }, [isActive, seconds]);
+  useEffect(() => {
+    let interval = null;
+    if (seconds > 0) {
+      interval = setInterval(() => {
+        setSeconds((seconds) => (seconds -= 1));
+      }, 1000);
+    }
+    if (minutes === 1 && seconds === 0) {
+      setMinutes((minutes) => minutes - 1);
+      setSeconds((seconds) => (seconds = 59));
+    } else if (!isActive && seconds === 0) {
+      clearInterval(interval);
+    }
+    return () => clearInterval(interval);
+  }, [isActive, seconds, minutes]);
 
   const countMoves = (count) => {
     setCount(count + 1);
@@ -80,7 +84,7 @@ const Game = () => {
         setDisabled(true);
         resetCards();
       }
-      if (id ===22) {
+      if (id === 22) {
         countMoves(count);
         setBonus([...bonus, id]);
         setDisabled(true);
@@ -94,9 +98,9 @@ const Game = () => {
     }
   };
 
-const jumpScare = () => {
-  setViewScare(false);
-};
+  const jumpScare = () => {
+    setViewScare(false);
+  };
   // const finishGame = () => {
   //   if (solved.length === cards.length) {
   //     return <ModalFinishGame count={count} resetGame={newGame} />
@@ -109,7 +113,7 @@ const jumpScare = () => {
   // }
 
   const chooseModal = () => {
-    if (solved.length === 2) {
+    if (solved.length === cards.length - 3) {
       return <ModalFinishGame count={count} resetGame={newGame} />;
     } else if (minutes === 0 && seconds === 0) {
       return <ModalGameOver resetGame={newGame} />;
@@ -198,7 +202,7 @@ const jumpScare = () => {
         <PlayList />
       </div>
       {chooseModal()}
-      {viewScare ? <ModalScare/> : null}
+      {viewScare ? <ModalScare /> : null}
     </div>
   );
 };
