@@ -7,6 +7,7 @@ import Counter from "./Counter";
 import ModalFinishGame from "./ModalFinishGame";
 import ModalGameOver from "./ModalGameOver";
 import ModalScare from "./ModalScare";
+import ModalAlmostCaught from "./ModalAlmostCaught";
 import Trap from "./Trap"
 import "semantic-ui-css/semantic.min.css";
 import "./game.css";
@@ -21,37 +22,44 @@ const Game = () => {
   const [bonus, setBonus] = useState([]);
   const [disabled, setDisabled] = useState(false);
   const [count, setCount] = useState(0);
-  const [seconds, setSeconds] = useState(59);
+  const [seconds, setSeconds] = useState(30);
   const [isActive, setIsActive] = useState(false);
-  const [minutes, setMinutes] = useState(0);
+  const [minutes, setMinutes] = useState(1);
   const [viewScare, setViewScare] = useState(false)
   const [viewTrap, setViewTrap] = useState(false)
+  const [viewModalAlmost, setViewModalAlmost] = useState(false);
 
   const newGame = () => {
     setSolved([]);
     setCount(0);
     shuffle(cards);
     reset();
-    setMinutes(0);
+    setMinutes(1);
+    setSeconds(10);
     setBonus([]);
   };
 
   function reset() {
-    setSeconds(59);
+    setMinutes(1);
+    setSeconds(30);
     setIsActive(true);
   }
 
-  //  useEffect(() => {
-  //    let interval = null;
-  //    if (seconds > 0) {
-  //      interval = setInterval(() => {
-  //        setSeconds((seconds) => (seconds -= 1));
-  //      }, 1000);
-  //    } else if (!isActive && seconds === 0) {
-  //      clearInterval(interval);
-  //    }
-  //    return () => clearInterval(interval);
-  //  }, [isActive, seconds]);
+  useEffect(() => {
+    let interval = null;
+    if (seconds > 0) {
+      interval = setInterval(() => {
+        setSeconds((seconds) => (seconds -= 1));
+      }, 1000);
+    }
+    if (minutes === 1 && seconds === 0) {
+      setMinutes((minutes) => minutes - 1);
+      setSeconds((seconds) => (seconds = 59));
+    } else if (!isActive && seconds === 0) {
+      clearInterval(interval);
+    }
+    return () => clearInterval(interval);
+  }, [isActive, seconds, minutes]);
 
   const countMoves = (count) => {
     setCount(count + 1);
@@ -62,20 +70,22 @@ const Game = () => {
     if (flipped.length === 0) {
       setFlipped([id]);
       setDisabled(false);
+
       if (id > 21 && id < 27) {
         countMoves(count);
         setBonus([...bonus, id]);
         setDisabled(true);
         resetCards();
       }
-      if (id === 22) {
-        countMoves(count);
-        setBonus([...bonus, id]);
-        setDisabled(true);
-        resetCards();
-        setViewScare(true);
-        jumpScare()
-      } 
+      // if (id === 22) {
+      //   countMoves(count);
+      //   setBonus([...bonus, id]);
+      //   setDisabled(true);
+      //   resetCards();
+      //   setViewScare(true);
+      //   jumpScare()
+      //   setTimeout(jumpScare, 2000);
+      // } 
       if (id === 24) {
         countMoves(count);
         setDisabled(true);
@@ -84,9 +94,18 @@ const Game = () => {
         shuffleCard()
         setTimeout(viewTrapOff, 3500);
       } 
+      if (id === 26) {
+        setViewModalAlmost(true);
+        setCount(count - 2);
+        setBonus([...bonus, id]);
+        setDisabled(true);
+        resetCards();
+        setTimeout(() => setViewModalAlmost(false), 2000);
+      }
     } else {
       if (sameCardClicked(id)) return;
       setFlipped([flipped[0], id]);
+
       if (isMatch(id)) {
         countMoves(count);
         setSolved([...solved, flipped[0], id]);
@@ -113,7 +132,14 @@ const Game = () => {
         setViewTrap(true)
         shuffleCard()
         setTimeout(viewTrapOff, 3500);
-       
+      }
+      if (id === 26) {
+        setViewModalAlmost(true);
+        setCount(count - 2);
+        setBonus([...bonus, id]);
+        setDisabled(true);
+        resetCards();
+        setTimeout(() => setViewModalAlmost(false), 2000);
       } else {
         countMoves(count);
         setTimeout(resetCards, 1000);
@@ -131,16 +157,6 @@ const viewTrapOff = () => {
 const jumpScare = () => {
   setViewScare(false);
 };
-  // const finishGame = () => {
-  //   if (solved.length === cards.length) {
-  //     return <ModalFinishGame count={count} resetGame={newGame} />
-  //   }
-  // }
-  // const gameOver =() =>{
-  //   if ((minutes ===0) && (seconds === 0)){
-  //     return <ModalGameOver resetGame={newGame} />
-  //   }
-  // }
 
   const chooseModal = () => {
     if (solved.length === 10) {
@@ -168,43 +184,39 @@ const jumpScare = () => {
   }, []);
 
   const getData = () => {
-    axios
-      .get("https://horrormemo.herokuapp.com/memory")
-      // .then(response => console.log(response.data))
-      .then((response) => {
-        setCards(
-          shuffle(
-            shuffle(response.data.filter((e) => e.id <= 19))
-              .filter((e, index) => index < 10)
-              .reduce(
-                (res, current) => [
-                  ...res,
-                  current,
-                  {
-                    id: current.id + 30,
-                    name: current.name,
-                    image: current.image,
-                  },
-                ],
-                []
+    axios.get("https://horrormemo.herokuapp.com/memory").then((response) => {
+      setCards(
+        shuffle(
+          shuffle(response.data.filter((e) => e.id <= 19))
+            .filter((e, index) => index < 10)
+            .reduce(
+              (res, current) => [
+                ...res,
+                current,
+                {
+                  id: current.id + 30,
+                  name: current.name,
+                  image: current.image,
+                },
+              ],
+              []
+            )
+            .concat(
+              response.data.filter(
+                (e) => e.id === 26 || e.id === 22 || e.id === 24
               )
-              .concat(
-                response.data.filter(
-                  (e) => e.id === 26 || e.id === 22 || e.id === 24
-                )
-              )
-          ),
-          setCardsBack(
-            response.data.filter((e) => e.id === 27).map((e) => e.image)
-          )
-        );
-      });
+            )
+        ),
+        setCardsBack(
+          response.data.filter((e) => e.id === 27).map((e) => e.image)
+        )
+      );
+    });
   };
 
-  console.log(flipped.length);
-  console.log(disabled);
-  console.log(flipped);
   console.log(cards);
+  console.log(flipped);
+  console.log(disabled);
 
   return (
     <div className="background">
@@ -234,6 +246,7 @@ const jumpScare = () => {
       {chooseModal()}
       {viewScare ? <ModalScare/> : null}
       {viewTrap ? <Trap/> : null}
+      {viewModalAlmost ? <ModalAlmostCaught /> : null}
     </div>
   );
 };
