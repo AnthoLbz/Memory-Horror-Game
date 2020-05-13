@@ -9,22 +9,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     cursor: url("../fonts/cursor/curseur-souris.png"),pointer;
 }
 
  .timer {
     line-height: 30px;
-    width: 100px;
-    background-color: black;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #D40C22;
     border: solid #D40C22 3px;
     border-radius: 10%;
     background-color: black;
-    color:l#D40C22;
-    border: solid #D40C22 3px;
-    border-radius: 10%;
     font-weight: bold;
     text-align: center;
     cursor: url("../fonts/cursor/curseur-souris.png"),pointer;
 }
-

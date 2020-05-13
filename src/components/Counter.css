@@ -18,11 +18,16 @@ h3 {
 
 .counter {
     line-height: 30px;
-    width: 100px;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: black;
     color: #D40C22;
     border: solid #D40C22 3px;
     border-radius: 10%;
     font-weight: bold;
     text-align: center;
+    cursor: url("../fonts/cursor/curseur-souris.png"),pointer;
 }
