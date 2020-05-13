@@ -8,10 +8,10 @@ import PlayList from "./PlayList";
 const Landing = () => {
   return (
     <div className="landing">
-      <Link to="/" className="title">
+      <Link to="/" className="landingTitle">
         Memory Horror Game
       </Link>
-      <h2 class="container">
+      <h2 className="container">
         <p>Welcome to, The game....</p>
         <p>
           So you think you just stumbled upon some classic joyful memory game ?
@@ -39,9 +39,12 @@ const Landing = () => {
           ► Play
         </Button>
       </Link>
-      <div className="videos">
+      <div className="footer">
         <Link to="/Videos">
           <p>Videos</p>
+        </Link>
+        <Link to="/Contact">
+          <p>About us</p>
         </Link>
       </div>
       <div className="playlist">

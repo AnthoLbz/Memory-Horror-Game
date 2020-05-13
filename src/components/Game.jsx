@@ -159,7 +159,7 @@ const jumpScare = () => {
 };
 
   const chooseModal = () => {
-    if (solved.length === 10) {
+    if (solved.length === cards.length -3) {
       return <ModalFinishGame count={count} resetGame={newGame} />;
     } else if (minutes === 0 && seconds === 0) {
       return <ModalGameOver resetGame={newGame} />;
@@ -221,7 +221,7 @@ const jumpScare = () => {
   return (
     <div className="background">
       <div>
-        <Link to="/" className="title">
+        <Link to="/" className="gameTitle">
           Memory Horror Game
         </Link>
       </div>

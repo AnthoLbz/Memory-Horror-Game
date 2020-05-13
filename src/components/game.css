@@ -18,7 +18,7 @@
   min-width: 100%;
   cursor: url("../fonts/cursor/curseur-souris.png"),pointer;
 }
-.title {
+.gameTitle {
   background-image: url(https://media.giphy.com/media/LShzvtC3Ri1oO7TMHT/giphy.gif);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -32,6 +32,7 @@
   justify-content: center;
   cursor: pointer;
   margin-bottom: 30px;
+  cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
 }
 .box {
   padding: 0px 10px 10px 10px;
