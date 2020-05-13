@@ -1,0 +1,29 @@
+.textTrap {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:black;
+    -webkit-text-stroke: 0.1px white;
+    font-family: "Mukadua";
+    font-size: 45px;
+    font-weight: bold;
+  }
+
+  .containerTrap {
+    display:flex ;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-top: 50vh;
+    transform: translateY(-50%);
+    height: auto;
+    width: auto;
+  }
+
+
+.imageBearTrap{
+  border:transparent 6px;
+  border-radius: 4px;
+}

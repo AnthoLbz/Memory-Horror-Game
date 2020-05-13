@@ -7,6 +7,7 @@ import Counter from "./Counter";
 import ModalFinishGame from "./ModalFinishGame";
 import ModalGameOver from "./ModalGameOver";
 import ModalScare from "./ModalScare";
+import Trap from "./Trap"
 import "semantic-ui-css/semantic.min.css";
 import "./game.css";
 import { Link } from "react-router-dom";
@@ -24,6 +25,7 @@ const Game = () => {
   const [isActive, setIsActive] = useState(false);
   const [minutes, setMinutes] = useState(0);
   const [viewScare, setViewScare] = useState(false)
+  const [viewTrap, setViewTrap] = useState(false)
 
   const newGame = () => {
     setSolved([]);
@@ -66,6 +68,22 @@ const Game = () => {
         setDisabled(true);
         resetCards();
       }
+      if (id === 22) {
+        countMoves(count);
+        setBonus([...bonus, id]);
+        setDisabled(true);
+        resetCards();
+        setViewScare(true);
+        jumpScare()
+      } 
+      if (id === 24) {
+        countMoves(count);
+        setDisabled(true);
+        resetCards();
+        setViewTrap(true)
+        shuffleCard()
+        setTimeout(viewTrapOff, 3500);
+      } 
     } else {
       if (sameCardClicked(id)) return;
       setFlipped([flipped[0], id]);
@@ -80,19 +98,35 @@ const Game = () => {
         setDisabled(true);
         resetCards();
       }
-      if (id ===22) {
+      if (id === 22) {
         countMoves(count);
         setBonus([...bonus, id]);
         setDisabled(true);
         resetCards();
         setViewScare(true);
         setTimeout(jumpScare, 2000);
+      } 
+      if (id === 24) {
+        countMoves(count);
+        setDisabled(true);
+        resetCards();
+        setViewTrap(true)
+        shuffleCard()
+        setTimeout(viewTrapOff, 3500);
+       
       } else {
         countMoves(count);
         setTimeout(resetCards, 1000);
       }
     }
-  };
+  }
+const shuffleCard = () => {
+  shuffle(cards)
+}
+
+const viewTrapOff = () => {
+  setViewTrap(false);
+};
 
 const jumpScare = () => {
   setViewScare(false);
@@ -109,7 +143,7 @@ const jumpScare = () => {
   // }
 
   const chooseModal = () => {
-    if (solved.length === 2) {
+    if (solved.length === 10) {
       return <ModalFinishGame count={count} resetGame={newGame} />;
     } else if (minutes === 0 && seconds === 0) {
       return <ModalGameOver resetGame={newGame} />;
@@ -199,6 +233,7 @@ const jumpScare = () => {
       </div>
       {chooseModal()}
       {viewScare ? <ModalScare/> : null}
+      {viewTrap ? <Trap/> : null}
     </div>
   );
 };
