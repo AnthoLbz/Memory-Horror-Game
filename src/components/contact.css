@@ -22,6 +22,7 @@
   background-image: url(https://media.giphy.com/media/LShzvtC3Ri1oO7TMHT/giphy.gif);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   font-size: 78px;
   font-family: "Faceyourfears";

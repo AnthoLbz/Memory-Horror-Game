@@ -27,6 +27,7 @@
   background-image: url(https://media.giphy.com/media/LShzvtC3Ri1oO7TMHT/giphy.gif);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   font-size: 58px;
   font-family: "Faceyourfears";
@@ -124,6 +125,7 @@ a {
       background-image: url(https://media.giphy.com/media/LShzvtC3Ri1oO7TMHT/giphy.gif);
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
+      background-clip: text;
       color: transparent;
       font-size: 68px;
       font-family: "Faceyourfears";
@@ -223,6 +225,7 @@ a {
       background-image: url(https://media.giphy.com/media/LShzvtC3Ri1oO7TMHT/giphy.gif);
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
+      background-clip: text;
       color: transparent;
       font-size: 68px;
       font-family: "Faceyourfears";
@@ -326,6 +329,7 @@ a {
       background-image: url(https://media.giphy.com/media/LShzvtC3Ri1oO7TMHT/giphy.gif);
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
+      background-clip: text;
       color: transparent;
       font-size: 28px;
       font-family: "Faceyourfears";
