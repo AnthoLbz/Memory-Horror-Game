@@ -18,7 +18,6 @@
   min-height: 100%;
   min-width: 100%;
 }
-
 .contactTitle {
   background-image: url(https://media.giphy.com/media/LShzvtC3Ri1oO7TMHT/giphy.gif);
   -webkit-text-fill-color: transparent;
@@ -57,8 +56,8 @@
   padding: 5px;
 }
 .wildLogo img{
-  width: 540px;
-  height: 140px;
+  width: 300px;
+  height: 79px;
   cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
 }
 .wildLogo img:hover{
@@ -95,10 +94,11 @@
   cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
 }
 .playlistContact{
+  margin-left: -70%
 }
 @media screen and (max-width: 560px) {
   .playlistContact{
-    margin-left: -6%;
+    margin-left: -8%;
 }
   .wildLogo img{
   width: 200px;
@@ -115,6 +115,7 @@
 @media screen and (min-width: 561px) and (max-width: 800px) {
   .playlistContact{
     margin-bottom: 3%;
+    margin-left: -6%;
 }
   .wildLogo img{
   margin-top: 50px;
