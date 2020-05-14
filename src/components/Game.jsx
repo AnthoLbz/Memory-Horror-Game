@@ -250,7 +250,7 @@ const Game = () => {
       <div className="playlist">
         <PlayList />
       </div>
-      {/* {chooseModal()} */}
+       {chooseModal()} 
       {viewScare ? <ModalScare /> : null}
       {viewTrap ? <Trap /> : null}
       {viewModalAlmost ? <ModalAlmostCaught /> : null}
