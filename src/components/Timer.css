@@ -28,3 +28,21 @@
     text-align: center;
     cursor: url("../fonts/cursor/curseur-souris.png"),pointer;
 }
+
+@media screen 
+  and (max-width: 767px) {
+
+    .timerContainer > * {
+        font-size: 15px;
+    }
+
+    .timer {
+        width: 40px;
+        height: 40px; 
+    }
+
+    .timerContainer h3{
+        font-size: 12px;
+        margin-right: 15px;
+    }
+}
