@@ -20,6 +20,11 @@
   margin-top: 20%;
   cursor: url("../fonts/cursor/curseur-souris.png"),pointer;
 }
+
+.Finish h1, .Finish h3{
+ font-family: "Faceyourfears";
+}
+
 .altFinish{
   display: flex;
   z-index: 20;

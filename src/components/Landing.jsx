@@ -8,9 +8,11 @@ import PlayList from "./PlayList";
 const Landing = () => {
   return (
     <div className="landing">
-      <Link to="/" className="landingTitle">
-        Memory Horror Game
-      </Link>
+      <div className="landingDiv">
+        <Link to="/" className="landingTitle">
+          Memory Horror Game
+        </Link>
+      </div>
       <h2 className="container">
         <p>Welcome to, The game....</p>
         <p>

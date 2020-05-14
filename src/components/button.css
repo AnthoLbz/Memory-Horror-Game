@@ -20,56 +20,7 @@ a {
 }
 
 /*button styles */
-.btn--easy--solid {
-  color: black;
-  border: none;
-  background: -webkit-linear-gradient(rgb(86, 87, 84) 50%, var(--easy) 50%);
-  opacity: 70%;
-  background-size: 200px 120px;
-  position: relative;
-  left:80% ;
-}
-.btn--easy--solid:hover {
-  background-position: 0 -60px;
-  color: var(--return);
-}
-.btn--medium--solid {
-  color: black;
-  border: none;
-  background: -webkit-linear-gradient(rgb(86, 87, 84) 50%, var(--medium) 50%);
-  opacity: 70%;
-  background-size: 200px 120px;
-  position: relative;
-  left:80% ;
-}
-.btn--medium--solid:hover {
-  background-position: 0 -60px;
-  color: var(--return);
-}
-.btn--hard--solid {
-  color: black;
-  border: none;
-  background: -webkit-linear-gradient(rgb(86, 87, 84) 50%, var(--hard) 50%);
-  opacity: 70%;
-  background-size: 200px 120px;
-  position: relative;
-  left:80% ;
-}
-.btn--hard--solid:hover {
-  background-position: 0 -60px;
-  color: var(--return);
-}
-.btn--return--solid {
-  color: black;
-  border: none;
-  background: -webkit-linear-gradient(0deg, var(--hard) 50%, transparent 50%);
-  background-size: 470px 120px;
-}
 
-.btn--return--solid:hover {
-  background-position: -235px 0;
-  color: var(--return);
-}
 .btn--play--solid{
   text-align: center;
   display: inline-block;
@@ -102,18 +53,6 @@ a {
 }
 
 /*button size */
-
-.btn--medium {
-  padding: 10px 20px;
-  font-size: 18px;
-  width: 235px;
-}
-
-.btn--large {
-  padding: 15px 30px;
-  font-size: 20px;
-  width: 160px;
-}
 
 .btn--game {
   margin: 5px;
