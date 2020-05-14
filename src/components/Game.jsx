@@ -45,21 +45,21 @@ const Game = () => {
     setIsActive(true);
   }
 
-  useEffect(() => {
-    let interval = null;
-    if (seconds > 0) {
-      interval = setInterval(() => {
-        setSeconds((seconds) => (seconds -= 1));
-      }, 1000);
-    }
-    if (minutes === 1 && seconds === 0) {
-      setMinutes((minutes) => minutes - 1);
-      setSeconds((seconds) => (seconds = 59));
-    } else if (!isActive && seconds === 0) {
-      clearInterval(interval);
-    }
-    return () => clearInterval(interval);
-  }, [isActive, seconds, minutes]);
+  // useEffect(() => {
+  //   let interval = null;
+  //   if (seconds > 0) {
+  //     interval = setInterval(() => {
+  //       setSeconds((seconds) => (seconds -= 1));
+  //     }, 1000);
+  //   }
+  //   if (minutes === 1 && seconds === 0) {
+  //     setMinutes((minutes) => minutes - 1);
+  //     setSeconds((seconds) => (seconds = 59));
+  //   } else if (!isActive && seconds === 0) {
+  //     clearInterval(interval);
+  //   }
+  //   return () => clearInterval(interval);
+  // }, [isActive, seconds, minutes]);
 
   const countMoves = (count) => {
     setCount(count + 1);
