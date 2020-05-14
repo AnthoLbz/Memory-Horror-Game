@@ -10,7 +10,7 @@ function Board ({cards, cardsBack, flipped, handleClick, disabled, solved, bonus
                     bonus={bonus.includes(card.id)}
                     id={card.id}
                     width={120}
-                    height={160}
+                    height={170}
                     back={cardsBack}
                     cardsFront={card.image}
                     flipped={flipped.includes(card.id)}
