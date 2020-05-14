@@ -78,6 +78,7 @@
   }
   
   .back {
+    z-index: 2;
     transform: rotateY(0deg);
   }
   
@@ -92,3 +93,37 @@
   margin-top: 10%;
   margin-left: 5%;
 }
+
+@media screen and (max-device-width: 688px) {
+
+
+  .gameTitle {
+    font-size: 30px;
+    text-align: center;
+    line-height: 1em;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .board {
+    display: flex;
+    flex-wrap: wrap row;
+    justify-content: center;
+    /* width: 70%; */
+    /* height: ; */
+  }
+
+  .flipper {
+    height: auto;
+    width: 10px;
+  }
+
+  .outerBox {
+    
+  }
+
+  .timer, .counter {
+    font-size: 20px;
+  }
+}
+  
