@@ -92,7 +92,7 @@ const Game = () => {
         resetCards();
         setViewTrap(true);
         shuffleCard();
-        
+        setTimeout(viewTrapOff, 3500);
       }
       if (id === 26) {
         setViewModalAlmost(true);
