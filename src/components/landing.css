@@ -87,10 +87,27 @@
 }
 @media screen and (max-width: 800px) {
   .playlist {
- margin-left: -10%;
+ margin-left: -35%;
  margin-top: -2.15%;
  padding-top: 20px;
  margin-bottom: 5px;
+}
+.landingTitle {
+  background-image: url(https://media.giphy.com/media/LShzvtC3Ri1oO7TMHT/giphy.gif);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 78px;
+  font-family: "Faceyourfears";
+  animation: filling 4s ease forwards;
+  line-height: 80px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin: 3% 0% 7.9% 0%;
+  cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
 }
 }
 @media screen and (min-width: 1601px) and (max-width: 1920px){

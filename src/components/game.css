@@ -31,7 +31,7 @@
   display: flex;
   justify-content: center;
   cursor: pointer;
-  margin-bottom: 30px;
+  margin-bottom: 17px;
   cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
 }
 .box {
@@ -157,6 +157,8 @@
     }
     
     .playlist {
+      margin-top: 0px;
+      margin-left: -50%;
       width: 120px;
     }
   
@@ -172,14 +174,12 @@
       margin: 0px !important;
     } 
   
-    
-  
     .gameTitle {
       font-size: 60px;
       text-align: center;
       line-height: 1em;
       padding: 10px;
-      margin-bottom: 0px;
+      margin-bottom: -12px;
     }
   
     .board {
@@ -356,7 +356,7 @@
       margin-left: 5%;
       }
     .playlist {
-      margin-top:-50px;
-      margin-bottom:14px;
+      margin-top:-49px;
+      margin-bottom:13px;
     }
     }
