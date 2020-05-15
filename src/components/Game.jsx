@@ -66,7 +66,7 @@ const Game = () => {
   };
 
   const handleClick = (id) => {
-    setDisabled(true);
+    // setDisabled(true);
 
     if (flipped.length === 0) {
       setFlipped([id]);
