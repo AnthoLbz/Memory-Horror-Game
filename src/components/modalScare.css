@@ -18,3 +18,26 @@
   background-size: contain;
   background-position: center;
 }
+
+@media screen 
+  and (max-width: 767px) {
+   .scare {
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 414px;
+      height: 812px;
+    }
+}
+
+@media screen 
+    and (min-width: 768px) 
+    and (max-width: 900px) {
+      .scare {
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 768px;
+        height: 1024px;
+      }
+}

@@ -31,3 +31,21 @@ h3 {
     text-align: center;
     cursor: url("../fonts/cursor/curseur-souris.png"),pointer;
 }
+
+@media screen 
+  and (max-width: 767px) {
+
+    .counterContainer > * {
+        font-size: 15px;
+    }
+    
+    .counter {
+        width: 40px;
+        height: 40px;
+    }
+
+    .counterContainer h3{
+        font-size: 12px;
+        margin-left: 15px;
+    }
+}

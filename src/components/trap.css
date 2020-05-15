@@ -27,3 +27,38 @@
   border:transparent 6px;
   border-radius: 4px;
 }
+
+@media screen 
+    and (max-width: 767px) {
+      .containerTrap {
+        z-index: 200;
+        position: absolute;
+      }
+
+      .textTrap {
+        font-size: 20px;
+      }
+    
+      .imageBearTrap{
+        max-height: 100%;
+        max-width: 100%;
+      }
+  }
+
+  @media screen 
+    and (min-width: 768px) and (max-width: 900px) {
+      .containerTrap {
+        z-index: 200;
+        position: absolute;
+      }
+
+      .textTrap {
+        font-size: 35px;
+      }
+    
+      .imageBearTrap{
+        max-height: 100%;
+        max-width: 100%;
+      }
+  }
+  

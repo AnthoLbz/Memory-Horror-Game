@@ -66,7 +66,7 @@ const Game = () => {
   };
 
   const handleClick = (id) => {
-    // setDisabled(true);
+    setDisabled(true);
 
     if (flipped.length === 0) {
       setFlipped([id]);
@@ -221,7 +221,7 @@ const Game = () => {
   };
   // console.log(disabled);
   // console.log(cards);
-  console.log(flipped);
+  console.log(cards);
 
   return (
     <div className="background">
@@ -231,8 +231,10 @@ const Game = () => {
         </Link>
       </div>
       <div className="outerBox">
+        <div className='timerCounterContainer'>
         <Timer minutes={minutes} seconds={seconds} />
         <Counter count={count} />
+        </div>
         <div className="box">
           <Board
             cards={cards}
@@ -248,7 +250,7 @@ const Game = () => {
       <div className="playlist">
         <PlayList />
       </div>
-      {chooseModal()}
+       {chooseModal()} 
       {viewScare ? <ModalScare /> : null}
       {viewTrap ? <Trap /> : null}
       {viewModalAlmost ? <ModalAlmostCaught /> : null}
