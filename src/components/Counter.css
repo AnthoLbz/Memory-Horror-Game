@@ -1,0 +1,51 @@
+.counterContainer > * {
+    font-family: 'MyHardboardCut';
+    font-size: 20px;
+    color: white;
+}
+
+.counterContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: -1.3%;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+.counter {
+    line-height: 30px;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: #D40C22;
+    border: solid #D40C22 3px;
+    border-radius: 10%;
+    font-weight: bold;
+    text-align: center;
+    cursor: url("../fonts/cursor/curseur-souris.png"),pointer;
+}
+
+@media screen 
+  and (max-width: 767px) {
+
+    .counterContainer > * {
+        font-size: 15px;
+    }
+    
+    .counter {
+        width: 40px;
+        height: 40px;
+    }
+
+    .counterContainer h3{
+        font-size: 12px;
+        margin-left: 15px;
+    }
+}

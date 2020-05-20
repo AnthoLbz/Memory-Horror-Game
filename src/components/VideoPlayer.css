@@ -1,0 +1,391 @@
+.Body1{
+  cursor: url("../fonts/cursor/curseur-souris.png"),pointer;
+  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSWczlaQka3-5neCW4yUmgkJnChaq1oKcTEg5y3rzVYA2cpPtcZ&usqp=CAU');
+  margin-bottom: -30px;
+}
+
+.Body{
+    cursor: url("../fonts/cursor/curseur-souris.png"),pointer;
+    background: url('https://www.toolfarm.com/images/uploads/blog/free_skull-background-texture.jpg');
+    margin: 50px;
+    padding: 5px;
+    border-radius: 10px;
+    opacity: 0.7;
+    border:3px solid #383838;
+}
+@keyframes filling {
+    from {
+      background-position: center 10%;
+    }
+    to {
+      background-position: center 40%;
+    }
+  }
+
+.videoTitle {
+  cursor: url("../fonts/cursor/curseur-main-pointeur.png"),pointer;
+  background-image: url(https://media.giphy.com/media/LShzvtC3Ri1oO7TMHT/giphy.gif);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 78px;
+  font-family: "Faceyourfears";
+  animation: filling 4s ease forwards;
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+  padding-bottom: 15px;
+}
+
+.VideoPlayer{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 50px;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.089);
+    border-radius: 3px;  
+    border: 1px solid #541713;
+    cursor: url("../fonts/cursor/curseur-main-pointeur.png"),pointer;
+}
+
+.test{
+  margin-top: 20px;
+}
+.Card{
+    display: flex;
+    align-self: center;
+    height: 200px;
+    width: 150px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 4px rgb(32, 32, 32);
+    border:1px solid #383838;
+}
+
+.Description{
+    display: flex;
+    align-self: center;
+    color: white;
+    -webkit-text-stroke: 0.3px black;
+    font-size: 50px;
+    font-family: "Faceyourfears";
+    padding: 10px;
+    cursor: url("../fonts/cursor/curseur-main-pointeur.png"),pointer;
+}
+
+.Player{
+    display: flex;
+    align-items: center;
+    border: 1px solid #541713;
+    border-radius: 3px;
+    cursor: url("../fonts/cursor/curseur-main-pointeur.png"),pointer;
+}
+
+hr{
+  color:#383838;
+  height: 0.1px;
+  margin: 50px;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media screen 
+  and (min-width: 768px) 
+  and (max-width: 1024px) 
+  {
+    .Body1{
+      cursor: url("../fonts/cursor/curseur-souris.png"),pointer;
+      background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSWczlaQka3-5neCW4yUmgkJnChaq1oKcTEg5y3rzVYA2cpPtcZ&usqp=CAU');
+      margin-bottom: -30px;
+    }
+    
+    .Body{
+        cursor: url("../fonts/cursor/curseur-souris.png"),pointer;
+        background: url('https://www.toolfarm.com/images/uploads/blog/free_skull-background-texture.jpg');
+        margin: 30px;
+        padding: 5px;
+        border-radius: 10px;
+        opacity: 0.7;
+        border:3px solid #383838;
+    }
+    @keyframes filling {
+        from {
+          background-position: center 10%;
+        }
+        to {
+          background-position: center 40%;
+        }
+      }
+    
+    .videoTitle {
+      cursor: url("../fonts/cursor/curseur-main-pointeur.png"),pointer;
+      background-image: url(https://media.giphy.com/media/LShzvtC3Ri1oO7TMHT/giphy.gif);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      color: transparent;
+      font-size: 68px;
+      font-family: "Faceyourfears";
+      animation: filling 4s ease forwards;
+      display: flex;
+      justify-content: center;
+      padding-top: 60px;
+      padding-bottom: 15px;
+    }
+    
+    .VideoPlayer{
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+        margin: 10px;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.089);
+        border-radius: 3px;  
+        border: 1px solid #541713;
+        cursor: url("../fonts/cursor/curseur-main-pointeur.png"),pointer;
+    }
+    
+    .test{
+      margin-top: 20px;
+    }
+    .Card{
+        display: flex;
+        align-self: center;
+        height: 200px;
+        width: 140px;
+        border-radius: 15px;
+        box-shadow: 4px 4px 4px rgb(32, 32, 32);
+        border:1px solid #383838;
+    }
+    
+    .Description{
+        display: flex;
+        align-self: center;
+        color: white;
+        -webkit-text-stroke: 0.3px black;
+        font-size: 40px;
+        font-family: "Faceyourfears";
+        padding: 10px;
+        cursor: url("../fonts/cursor/curseur-main-pointeur.png"),pointer;
+    }
+    
+    .Player{
+        display: flex;
+        align-items: center;
+        border: 1px solid #541713;
+        border-radius: 3px;
+        cursor: url("../fonts/cursor/curseur-main-pointeur.png"),pointer;
+    }
+    
+    hr{
+      color:#383838;
+      height: 0.1px;
+      margin: 50px;
+    }
+    
+    a {
+      text-decoration: none;
+    }
+
+}
+
+@media screen 
+  and (min-width: 557px) 
+  and (max-width: 875px) 
+  {
+    .Body1{
+      cursor: url("../fonts/cursor/curseur-souris.png"),pointer;
+      background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSWczlaQka3-5neCW4yUmgkJnChaq1oKcTEg5y3rzVYA2cpPtcZ&usqp=CAU');
+      margin-bottom: -30px;
+    }
+    
+    .Body{
+        cursor: url("../fonts/cursor/curseur-souris.png"),pointer;
+        background: url('https://www.toolfarm.com/images/uploads/blog/free_skull-background-texture.jpg');
+        margin: 30px;
+        padding: 5px;
+        border-radius: 10px;
+        opacity: 0.7;
+        border:3px solid #383838;
+    }
+    @keyframes filling {
+        from {
+          background-position: center 10%;
+        }
+        to {
+          background-position: center 40%;
+        }
+      }
+    
+    .videoTitle {
+      cursor: url("../fonts/cursor/curseur-main-pointeur.png"),pointer;
+      background-image: url(https://media.giphy.com/media/LShzvtC3Ri1oO7TMHT/giphy.gif);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      color: transparent;
+      font-size: 68px;
+      font-family: "Faceyourfears";
+      animation: filling 4s ease forwards;
+      display: flex;
+      justify-content: center;
+      padding-top: 60px;
+      padding-bottom: 15px;
+    }
+    
+    .VideoPlayer{
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+        margin: 10px;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.089);
+        border-radius: 3px;  
+        border: 1px solid #541713;
+        cursor: url("../fonts/cursor/curseur-main-pointeur.png"),pointer;
+    }
+    
+    .test{
+      margin-top: 20px;
+    }
+    .Card{
+        display: none;
+        align-self: center;
+        height: 180px;
+        width: 120px;
+        border-radius: 15px;
+        box-shadow: 4px 4px 4px rgb(32, 32, 32);
+        border:1px solid #383838;
+    }
+    
+    .Description{
+        display: flex;
+        align-self: center;
+        color: white;
+        -webkit-text-stroke: 0.3px black;
+        font-size: 30px;
+        font-family: "Faceyourfears";
+        padding: 10px;
+        cursor: url("../fonts/cursor/curseur-main-pointeur.png"),pointer;
+    }
+    
+    .Player{
+        display: flex;
+        align-items: center;
+        border: 1px solid #541713;
+        border-radius: 3px;
+        cursor: url("../fonts/cursor/curseur-main-pointeur.png"),pointer;
+        height: 160px !important;
+        width: 170px !important;
+    }
+    
+    hr{
+      color:#383838;
+      height: 0.1px;
+      margin: 50px;
+    }
+    
+    a {
+      text-decoration: none;
+    }
+
+}
+
+
+
+@media screen 
+  and (min-width: 366px) 
+  and (max-width: 556px) 
+   { 
+    .Body1{
+      cursor: url("../fonts/cursor/curseur-souris.png"),pointer;
+      background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSWczlaQka3-5neCW4yUmgkJnChaq1oKcTEg5y3rzVYA2cpPtcZ&usqp=CAU');
+      margin-bottom: -30px;
+    }
+    
+    .Body{
+        cursor: url("../fonts/cursor/curseur-souris.png"),pointer;
+        background: url('https://www.toolfarm.com/images/uploads/blog/free_skull-background-texture.jpg');
+        margin: 50px;
+        padding: 5px;
+        border-radius: 10px;
+        opacity: 0.7;
+        border:3px solid #383838;
+    }
+    @keyframes filling {
+        from {
+          background-position: center 10%;
+        }
+        to {
+          background-position: center 40%;
+        }
+      }
+    
+    .videoTitle {
+      cursor: url("../fonts/cursor/curseur-main-pointeur.png"),pointer;
+      background-image: url(https://media.giphy.com/media/LShzvtC3Ri1oO7TMHT/giphy.gif);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      color: transparent;
+      font-size: 28px;
+      font-family: "Faceyourfears";
+      animation: filling 4s ease forwards;
+      display: flex;
+      justify-content: center;
+      padding-top: 60px;
+      padding-bottom: 15px;
+    }
+    
+    .VideoPlayer{
+        display: flex;
+        flex-direction: column;
+        justify-content: baseline;
+        margin: 2px;
+        padding: 2px;
+        background-color: rgba(255, 255, 255, 0.089);
+        border-radius: 3px;  
+        border: 1px solid #541713;
+        cursor: url("../fonts/cursor/curseur-main-pointeur.png"),pointer;
+        height: 250px;
+    }
+    
+    
+    .Card{
+        display: none;
+    }
+    
+    .Description{
+       display: flex;
+       
+       justify-content: center;
+       
+        color: white;
+        -webkit-text-stroke: 0.3px black;
+        font-size: 32px;
+        font-family: "Faceyourfears";
+        cursor: url("../fonts/cursor/curseur-main-pointeur.png"),pointer;
+    }
+    
+    .Player{
+       display: flex;
+       justify-content: center;
+       margin-left: 25%;
+       margin-bottom: 10px;
+        height: 160px !important;
+        width: 170px !important;
+        border: 1px solid #541713;
+        border-radius: 3px;
+        cursor: url("../fonts/cursor/curseur-main-pointeur.png"),pointer;
+    }
+    
+    hr{
+      color:#383838;
+      height: 0.1px;
+      margin: 50px;
+    }
+    
+    a {
+      text-decoration: none;
+    }    
+}
+

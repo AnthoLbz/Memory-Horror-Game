@@ -1,0 +1,26 @@
+/* .timerContainer > * {
+    font-family: 'MyHardboardCut';
+    font-size: 20px;
+}
+ 
+.timerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ .timer {
+    line-height: 30px;
+    width: 170px;
+    background-color: black;
+    color: #D40C22;
+    border: solid #D40C22 3px;
+    border-radius: 10%;
+    background-color: black;
+    color: #D40C22;
+    border: solid #D40C22 3px;
+    border-radius: 10%;
+    font-weight: bold;
+    text-align: center;
+}
+ */

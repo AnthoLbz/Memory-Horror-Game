@@ -1,0 +1,43 @@
+#react-cool-portal{
+  position: absolute;
+  top:0;
+  left: 0;
+  min-width: 100vw;
+  height: 100%;
+}
+.scare{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  z-index: 20;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.7);
+  background-image: url(../images/big-ticket-image-5d7e8c8f7ecb9789538126-cropped600-400.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+@media screen 
+  and (max-width: 767px) {
+   .scare {
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 414px;
+      height: 812px;
+    }
+}
+
+@media screen 
+    and (min-width: 768px) 
+    and (max-width: 900px) {
+      .scare {
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 768px;
+        height: 1024px;
+      }
+}

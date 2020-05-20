@@ -1,0 +1,270 @@
+.contact{
+  color: white;
+  background-image: url(../images/contact\ bg.jpg) ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  display: flex;
+  flex-flow: wrap column;
+  z-index: 20;
+  justify-content: center;
+  align-items: center;
+  cursor: url("../fonts/cursor/curseur-souris.png"), pointer;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  min-height: 100%;
+  min-width: 100%;
+}
+.contactTitle {
+  background-image: url(https://media.giphy.com/media/LShzvtC3Ri1oO7TMHT/giphy.gif);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 78px;
+  font-family: "Faceyourfears";
+  animation: filling 4s ease forwards;
+  display: flex;
+  line-height: 80px;
+  justify-content: center;
+  text-align: center;
+  padding: 50px;
+  margin-bottom: 51px;
+  cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
+}
+.contactContainer {
+  padding: 0px 10px 11px 10px;
+  margin: -2.1% 15% 1.5% 15%;
+  background-color: rgba(0, 0, 0, 0.3);
+  cursor: url("../fonts/cursor/curseur-souris.png"), pointer;
+}
+.contactContainer p {
+  text-align: center;
+  padding: 10px;
+  color: white;
+  font-size: 24px;
+  font-weight: 50;
+  font-family: "Mukadua";
+  cursor: url("../fonts/cursor/curseur-souris.png"), pointer;
+}
+.wildLogo{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding: 5px;
+}
+.wildLogo img{
+  width: 300px;
+  height: 79px;
+  cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
+}
+.wildLogo img:hover{
+  filter: invert(36%) sepia(72%) saturate(7244%) hue-rotate(343deg) brightness(55%) contrast(124%);
+  cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
+}
+
+.contactFiles{
+  display: flex;
+  justify-content: space-around;
+  flex-flow:wrap;
+  cursor: url("../fonts/cursor/curseur-souris.png"), pointer;
+}
+
+.github{
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+  cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
+}
+.github:hover{
+  filter: invert(36%) sepia(72%) saturate(7244%) hue-rotate(343deg) brightness(55%) contrast(124%);
+  cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
+}
+
+.linkedin{
+  height: 50px;
+  width: 50px;
+  filter: invert(96%) sepia(4%) saturate(0%) hue-rotate(286deg) brightness(105%) contrast(103%);
+  cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
+}
+.linkedin:hover{
+  filter: invert(36%) sepia(87%) saturate(3294%) hue-rotate(168deg) brightness(95%) contrast(102%);
+  cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
+}
+.playlistContact{
+  margin-left: -70%
+}
+@media screen and (max-width: 560px) {
+  .playlistContact{
+    margin-left: -8%;
+}
+  .wildLogo img{
+  width: 200px;
+  height: 70px;
+  cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
+}
+.wildLogo img:hover{
+  width: 200px;
+  height: 70px;
+  filter: invert(36%) sepia(72%) saturate(7244%) hue-rotate(343deg) brightness(55%) contrast(124%);
+  cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
+}
+.github{
+  height: 50px;
+  width: 70px;
+}
+}
+@media screen and (min-width: 561px) and (max-width: 800px) {
+  .playlistContact{
+    margin-bottom: 3%;
+    margin-left: -6%;
+}
+.github{
+  height: 50px;
+  width: 70px;
+  margin-right: 0px;
+}
+  .wildLogo img{
+  margin-top: 50px;
+  width: 200px;
+  height: 70px;
+  cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
+}
+.wildLogo img:hover{
+  filter: invert(36%) sepia(72%) saturate(7244%) hue-rotate(343deg) brightness(55%) contrast(124%);
+  cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
+}
+.contactFiles{
+  display: flex;
+  justify-content: space-between;
+  flex-flow:wrap;
+  margin-top: 50px;
+  padding: 0px;
+  cursor: url("../fonts/cursor/curseur-souris.png"), pointer;
+}
+}
+@media screen 
+    and (min-width: 1500px) and (max-width: 1600px) {
+      .contactTitle {
+  background-image: url(https://media.giphy.com/media/LShzvtC3Ri1oO7TMHT/giphy.gif);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 78px;
+  font-family: "Faceyourfears";
+  animation: filling 4s ease forwards;
+  display: flex;
+  line-height: 80px;
+  justify-content: center;
+  text-align: center;
+  padding: 50px;
+  margin-bottom: 0px;
+  cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
+}
+.contactContainer {
+  padding: 0px 10px 11px 10px;
+  margin: -2% 15% 1.5% 15%;
+  background-color: rgba(0, 0, 0, 0.3);
+  cursor: url("../fonts/cursor/curseur-souris.png"), pointer;
+}
+.contactContainer p {
+  text-align: center;
+  padding: 10px;
+  color: white;
+  font-size: 24px;
+  font-weight: 50;
+  font-family: "Mukadua";
+  cursor: url("../fonts/cursor/curseur-souris.png"), pointer;
+}
+.wildLogo{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding: 5px;
+}
+.wildLogo img{
+  margin-top: 20px;
+  width: 300px;
+  height: 90px;
+  cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
+}
+.wildLogo img:hover{
+  filter: invert(36%) sepia(72%) saturate(7244%) hue-rotate(343deg) brightness(55%) contrast(124%);
+  cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
+}
+
+.contactFiles{
+  display: flex;
+  justify-content: space-around;
+  flex-flow:wrap;
+  cursor: url("../fonts/cursor/curseur-souris.png"), pointer;
+  margin-top: 8px;
+}
+
+.github{
+  height: 60px;
+  width: 90px;
+  cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
+}
+.github:hover{
+  filter: invert(36%) sepia(72%) saturate(7244%) hue-rotate(343deg) brightness(55%) contrast(124%);
+  cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
+}
+
+.linkedin{
+  height: 60px;
+  width: 60px;
+  filter: invert(96%) sepia(4%) saturate(0%) hue-rotate(286deg) brightness(105%) contrast(103%);
+  cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
+}
+.linkedin:hover{
+  filter: invert(36%) sepia(87%) saturate(3294%) hue-rotate(168deg) brightness(95%) contrast(102%);
+  cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
+}
+.playlistContact{
+  margin-left: -70%
+}
+    }
+
+@media screen and (min-width: 1601px) and (max-width: 1920px){
+  .playlistContact{
+    margin-top: 2%;
+    margin-bottom: 0.35%;
+    margin-left: -75%;
+}
+  .wildLogo img{
+  margin-top: 50px;
+  width: 540px;
+  height: 140px;
+  cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
+}
+.wildLogo img:hover{
+  filter: invert(36%) sepia(72%) saturate(7244%) hue-rotate(343deg) brightness(55%) contrast(124%);
+  cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
+}
+.contactFiles{
+  display: flex;
+  justify-content: space-between;
+  flex-flow:wrap;
+  margin-top: 51px;
+  padding: 0px;
+  cursor: url("../fonts/cursor/curseur-souris.png"), pointer;
+}
+.contactContainer p {
+  text-align: center;
+  padding: 15px;
+  margin: 2.1% 15% 2.1% 15%;
+  color: white;
+  font-size: 24px;
+  font-weight: 50;
+  font-family: "Mukadua";
+  cursor: url("../fonts/cursor/curseur-souris.png"), pointer;
+}
+.github{
+  height: 60px;
+  width: 100px;
+  cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
+}
+}
