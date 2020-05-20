@@ -49,7 +49,7 @@ const Landing = () => {
           <p>About us</p>
         </Link>
       </div>
-      <div className="playlist">
+      <div className="playlist-landing">
         <PlayList />
       </div>
     </div>

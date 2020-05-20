@@ -247,7 +247,7 @@ const Game = () => {
           />
         </div>
       </div>
-      <div className="playlist">
+      <div className="playlist-game">
         <PlayList />
       </div>
        {chooseModal()} 

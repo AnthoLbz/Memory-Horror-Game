@@ -9,14 +9,17 @@
   z-index: 20;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0,0,0,0.7);
-  margin: 0;
-  padding: 0;
+  background-color: rgba(0, 0, 0, 0.7);
   height: 100%;
   width: 100%;
   min-height: 100%;
   min-width: 100%;
-  cursor: url("../fonts/cursor/curseur-souris.png"),pointer;
+  cursor: url("../fonts/cursor/curseur-souris.png"), pointer;
+}
+.background .playlist-game {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 .gameTitle {
   background-image: url(https://media.giphy.com/media/LShzvtC3Ri1oO7TMHT/giphy.gif);
@@ -43,7 +46,7 @@
   display: flex;
   align-items: center;
 }
-.board{
+.board {
   display: flex;
   justify-content: center;
   flex-flow: wrap row;
@@ -51,312 +54,356 @@
 }
 
 .flip-container {
-    perspective: 150px;
-    display: inline-block;
-    border: 1px solid transparent;
-    padding: 4px;
-  }
-  
-  .flip-container.flipped .flipper {
-    transform: rotateY(180deg);
-  }
-  
-  .flipper {
-    transition: 0.4s;
-    transform-style: preserve-3d;
-    position: relative;
-  }
-  
-  .front,
-  .back {
-    backface-visibility: hidden;
-    position: absolute;
-    left: -5px;
-    top: 0;
-    border-radius: 0px;
-    padding: 5px;
-  }
-  
-  .back {
-    transform: rotateY(0deg);
-  }
-  
-  .front {
-    transform: rotateY(180deg);
-    
-  }
-.outerBox{
+  perspective: 150px;
+  display: inline-block;
+  border: 1px solid transparent;
+  padding: 4px;
+}
+
+.flip-container.flipped .flipper {
+  transform: rotateY(180deg);
+}
+
+.flipper {
+  transition: 0.4s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.front,
+.back {
+  backface-visibility: hidden;
+  position: absolute;
+  left: -5px;
+  top: 0;
+  border-radius: 0px;
+  padding: 5px;
+}
+
+.back {
+  transform: rotateY(0deg);
+}
+
+.front {
+  transform: rotateY(180deg);
+}
+.outerBox {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
   margin-top: 10%;
   margin-left: 5%;
 }
-    
+
 @media screen and (max-width: 767px) {
-  
-     body {
-      height:100%;
-      margin: 0px !important;
-    } 
-  
-    
-  
-    .gameTitle {
-      font-size: 30px;
-      text-align: center;
-      line-height: 1em;
-      padding: 10px;
-      margin-bottom: 10px;
-    }
-  
-    .board {
-      padding-right: 10px;
-      width: 100%;
-      padding-bottom: 0px;
-    }
-  
-    .outerBox {
-      margin-top: 0px;
-      margin-left: 0px;
-    }
-  
-    .flip-container {
-      width: 70px !important;
-      height: 100px !important;
-      margin: 0px;
-    }
-  
-    .box {
-      padding: 0px 10px 10px 10px;
-      margin: 0 auto;
-      width: 100%;
-      height: 100%; 
-      background-color: rgba(0, 0, 0, 0.3);
-      display: flex;
-      align-items: center;
-    }
-  
-    .timerCounterContainer{
-      display: flex;
-      margin: auto;
-    }
-  
-    .counterContainer{
-      margin: 0px !important;
-    }
-    
-    .front{
-      width: 70px !important;
-      height: 100px !important;
-  
-    }
-    .back{
-      width: 70px !important;
-      height: 100px !important;
-    }
-    
-    .playlist {
-      margin-top: 0px;
-      margin-left: -50%;
-      width: 120px;
-    }
-  
-    .audio{
-      width:200px !important;
-    }
-  }
-  
-  @media screen 
-    and (min-width: 768px) and (max-width: 900px) {
   body {
-      height:100%;
-      margin: 0px !important;
-    } 
-  
-    .gameTitle {
-      font-size: 60px;
-      text-align: center;
-      line-height: 1em;
-      padding: 10px;
-      margin-bottom: -12px;
-    }
-  
-    .board {
-      padding-right: 10px;
-      width: 100%;
-      padding-bottom: 0px;
-    }
-  
-    .outerBox {
-      margin-top: 0px;
-      margin-left: 0px;
-    }
-  
-    .flip-container {
-      width: 120px !important;
-      height: 170px !important;
-      margin: 0px;
-    }
-  
-    .box {
-      padding: 0px 10px 10px 10px;
-      margin: 0 auto;
-      width: 100%;
-      height: 100%; 
-      background-color: rgba(0, 0, 0, 0.3);
-      display: flex;
-      align-items: center;
-    }
-  
-    .timerCounterContainer{
-      display: flex;
-      padding:10px;
-      margin: auto;
-    }
-  
-    .counterContainer{
-      margin: 30px !important;
-    }
-    .timerContainer {
-      margin: 30px !important;
-    }
-    
-    .front{
-      width: 120px !important;
-      height: 170px !important;
-  
-    }
-    .back{
-      width: 120px !important;
-      height: 170px !important;
-    }
-    
-    .playlist {
-      width: 120px;
-    }
-  
-    .audio{
-      width:200px !important;
-    }
+    height: 100%;
+    margin: 0px !important;
   }
-  @media screen 
-    and (min-width: 1400px) and (max-width: 1498px) {
+
   .gameTitle {
-      background-image: url(https://media.giphy.com/media/LShzvtC3Ri1oO7TMHT/giphy.gif);
-      -webkit-text-fill-color: transparent;
-      -webkit-background-clip: text;
-      color: transparent;
-      padding-top: 60px;
-      padding-bottom: 40px;
-      font-size: 78px;
-      font-family: "Faceyourfears";
-      animation: filling 4s ease forwards;
-      display: flex;
-      justify-content: center;
-      cursor: pointer;
-      margin-bottom: -34.6px;
-      cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
-    }
-    .box {
-      padding: 10px 10px 10px 10px;
-      margin: -26% 13% 1.5% 14%;
-      width: auto;
-      height: auto;
-      background-color: rgba(0, 0, 0, 0.3);
-      display: flex;
-      align-items: center;
-    }
-    .board{
-      display: flex;
-      justify-content: center;
-      flex-flow: wrap row;
-      padding: 10px 10px 20px 10px;
-    }
-  
-    .flip-container {
-      perspective: 150px;
-      display: inline-block;
-      border: 1px solid transparent;
-      padding: 4px;
-      }
-  
-    .outerBox{
-      display: flex;
-      align-items: flex-start;
-      flex-direction: column;
-      margin-top: 10%;
-      margin-left: 5%;
-      }
-    }
-  
-    @media screen 
-    and (min-width: 1601px) and (max-width: 1920px) {
+    font-size: 30px;
+    text-align: center;
+    line-height: 1em;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .board {
+    padding-right: 10px;
+    width: 100%;
+    padding-bottom: 0px;
+  }
+
+  .outerBox {
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  .flip-container {
+    width: 70px !important;
+    height: 100px !important;
+    margin: 0px;
+  }
+
+  .box {
+    padding: 0px 10px 10px 10px;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+  }
+
+  .timerCounterContainer {
+    display: flex;
+    margin: auto;
+  }
+
+  .counterContainer {
+    margin: 0px !important;
+  }
+
+  .front {
+    width: 70px !important;
+    height: 100px !important;
+  }
+  .back {
+    width: 70px !important;
+    height: 100px !important;
+  }
+
+  .playlist {
+    margin-top: 0px;
+    margin-left: -50%;
+    width: 120px;
+  }
+
+  .audio {
+    width: 200px !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 900px) {
+  body {
+    height: 100%;
+    margin: 0px !important;
+  }
+
   .gameTitle {
-      background-image: url(https://media.giphy.com/media/LShzvtC3Ri1oO7TMHT/giphy.gif);
-      -webkit-text-fill-color: transparent;
-      -webkit-background-clip: text;
-      color: transparent;
-      padding-top: 60px;
-      padding-bottom: 40px;
-      font-size: 78px;
-      font-family: "Faceyourfears";
-      animation: filling 4s ease forwards;
-      display: flex;
-      justify-content: center;
-      cursor: pointer;
-      margin-top: 20px;
-      margin-bottom: -30px;
-      cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
-    }
-    .box {
-      padding: 10px 10px 10px 10px;
-      margin: -21% 25% 1.5% 25%;
-      width: auto;
-      height: auto;
-      background-color: rgba(0, 0, 0, 0.3);
-      display: flex;
-      align-items: center;
-    }
-    .board{
-      display: flex;
-      justify-content: center;
-      flex-flow: wrap row;
-      padding: 10px 10px 20px 10px;
-    }
-  
-    .flip-container {
-      perspective: 150px;
-      display: inline-block;
-      border: 1px solid transparent;
-      padding: 4px;
-      width: 130px !important;
-      height: 190px !important;
-      margin: 0px;
-      }
-  
-    .front{
-      width: 130px !important;
-      height: 190px !important;
-  
-    }
-    .back{
-      width: 130px !important;
-      height: 190px !important;
-    }
-     .timerCounterContainer{
-      padding:10px;
-      margin-left:60px;
-    }
-    .outerBox{
-      display: flex;
-      align-items: flex-start;
-      flex-direction: column;
-      margin-top: 10%;
-      margin-left: 5%;
-      }
-    .playlist {
-      margin-top:-49px;
-      margin-bottom:13px;
-    }
-    }
+    font-size: 60px;
+    text-align: center;
+    line-height: 1em;
+    padding: 10px;
+    margin-bottom: -12px;
+  }
+
+  .board {
+    padding-right: 10px;
+    width: 100%;
+    padding-bottom: 0px;
+  }
+
+  .outerBox {
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  .flip-container {
+    width: 120px !important;
+    height: 170px !important;
+    margin: 0px;
+  }
+
+  .box {
+    padding: 0px 10px 10px 10px;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+  }
+
+  .timerCounterContainer {
+    display: flex;
+    padding: 10px;
+    margin: auto;
+  }
+
+  .counterContainer {
+    margin: 30px !important;
+  }
+  .timerContainer {
+    margin: 30px !important;
+  }
+
+  .front {
+    width: 120px !important;
+    height: 170px !important;
+  }
+  .back {
+    width: 120px !important;
+    height: 170px !important;
+  }
+
+  .playlist {
+    width: 120px;
+  }
+
+  .audio {
+    width: 200px !important;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1498px) {
+  .gameTitle {
+    background-image: url(https://media.giphy.com/media/LShzvtC3Ri1oO7TMHT/giphy.gif);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    color: transparent;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    font-size: 78px;
+    font-family: "Faceyourfears";
+    animation: filling 4s ease forwards;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: -34.6px;
+    cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
+  }
+  .box {
+    padding: 10px 10px 10px 10px;
+    margin: -26% 13% 1.5% 14%;
+    width: auto;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+  }
+  .board {
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap row;
+    padding: 10px 10px 20px 10px;
+  }
+
+  .flip-container {
+    perspective: 150px;
+    display: inline-block;
+    border: 1px solid transparent;
+    padding: 4px;
+  }
+
+  .outerBox {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 10%;
+    margin-left: 5%;
+  }
+}
+
+@media screen and (min-width: 1500px) and (max-width: 1600px) {
+  .gameTitle {
+    background-image: url(https://media.giphy.com/media/LShzvtC3Ri1oO7TMHT/giphy.gif);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    color: transparent;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    font-size: 78px;
+    font-family: "Faceyourfears";
+    animation: filling 4s ease forwards;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: -54px;
+    cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
+  }
+  .box {
+    padding: 2px 10px 2px 10px;
+    margin: -25% 15% 0% 15%;
+    width: auto;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+  }
+  .board {
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap row;
+    padding: 50px 10px 50px 50px;
+  }
+
+  .flip-container {
+    perspective: 150px;
+    display: inline-block;
+    border: 1px solid transparent;
+    padding: 4px;
+  }
+
+  .outerBox {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 10%;
+    margin-left: 5%;
+  }
+}
+.playlist-game {
+  margin-left: -70%;
+  margin-top: -2.2%;
+}
+
+@media screen and (min-width: 1601px) and (max-width: 1920px) {
+  .gameTitle {
+    background-image: url(https://media.giphy.com/media/LShzvtC3Ri1oO7TMHT/giphy.gif);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    color: transparent;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    font-size: 78px;
+    font-family: "Faceyourfears";
+    animation: filling 4s ease forwards;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: -31px;
+    cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
+  }
+  .box {
+    padding: 10px 10px 10px 10px;
+    margin: -20% 25% 1.5% 25%;
+    width: auto;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+  }
+  .board {
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap row;
+    padding: 10px 10px 20px 10px;
+  }
+
+  .flip-container {
+    perspective: 150px;
+    display: inline-block;
+    border: 1px solid transparent;
+    padding: 4px;
+    width: 130px !important;
+    height: 190px !important;
+    margin: 0px;
+  }
+
+  .front {
+    width: 130px !important;
+    height: 190px !important;
+  }
+  .back {
+    width: 130px !important;
+    height: 190px !important;
+  }
+  .timerCounterContainer {
+    padding: 10px;
+    margin-left: 60px;
+  }
+  .outerBox {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 10%;
+    margin-left: 0%;
+  }
+  .playlist-game {
+    margin-top: -49px;
+    margin-bottom: 13px;
+  }
+}

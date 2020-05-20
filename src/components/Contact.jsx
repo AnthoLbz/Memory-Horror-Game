@@ -19,7 +19,11 @@ const Contact = () => {
         </p>
         <p>But careful, no complaints allowed !</p>
         <div className="wildLogo">
-          <a href="https://www.wildcodeschool.com/fr-FR/campus/marseille">
+          <a
+            href="https://www.wildcodeschool.com/fr-FR/campus/marseille"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
               src="https://www.wildcodeschool.com/assets/logo_main-e4f3f744c8e717f1b7df3858dce55a86c63d4766d5d9a7f454250145f097c2fe.png"
               alt="Wild Code School logo"
@@ -29,14 +33,22 @@ const Contact = () => {
         <section className="contactFiles">
           <div className="contactData">
             <p>Helene</p>
-            <a href="https://github.com/HeleneM35">
+            <a
+              href="https://github.com/HeleneM35"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 className="github"
-                src="https://www.iconsdb.com/icons/preview/white/github-11-xxl.png"
+                src="https://www.sferalabs.cc/wp-content/uploads/github-logo-white.png"
                 alt="GitHub"
               />
             </a>
-            <a href="https://www.linkedin.com/in/helenemorel35/">
+            <a
+              href="https://www.linkedin.com/in/helenemorel35/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 className="linkedin"
                 src="https://img.icons8.com/ios/100/000000/linkedin.png"
@@ -46,14 +58,22 @@ const Contact = () => {
           </div>
           <div className="contactData">
             <p>Kenny</p>
-            <a href="https://github.com/kphiri84">
+            <a
+              href="https://github.com/kphiri84"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 className="github"
-                src="https://www.iconsdb.com/icons/preview/white/github-11-xxl.png"
+                src="https://www.sferalabs.cc/wp-content/uploads/github-logo-white.png"
                 alt="GitHub"
               />
             </a>
-            <a href="https://www.linkedin.com/in/kenny-phiri/">
+            <a
+              href="https://www.linkedin.com/in/kenny-phiri/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 className="linkedin"
                 src="https://img.icons8.com/ios/100/000000/linkedin.png"
@@ -63,14 +83,22 @@ const Contact = () => {
           </div>
           <div className="contactData">
             <p>David</p>
-            <a href="https://github.com/davidRbn">
+            <a
+              href="https://github.com/davidRbn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 className="github"
-                src="https://www.iconsdb.com/icons/preview/white/github-11-xxl.png"
+                src="https://www.sferalabs.cc/wp-content/uploads/github-logo-white.png"
                 alt="GitHub"
               />
             </a>
-            <a href="https://www.linkedin.com/in/david-ruben/">
+            <a
+              href="https://www.linkedin.com/in/david-ruben/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 className="linkedin"
                 src="https://img.icons8.com/ios/100/000000/linkedin.png"
@@ -80,14 +108,22 @@ const Contact = () => {
           </div>
           <div className="contactData">
             <p>Anthony</p>
-            <a href="https://github.com/AnthoLbz">
+            <a
+              href="https://github.com/AnthoLbz"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 className="github"
-                src="https://www.iconsdb.com/icons/preview/white/github-11-xxl.png"
+                src="https://www.sferalabs.cc/wp-content/uploads/github-logo-white.png"
                 alt="GitHub"
               />
             </a>
-            <a href="https://www.linkedin.com/in/anthony-lasbleiz">
+            <a
+              href="https://www.linkedin.com/in/anthony-lasbleiz"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 className="linkedin"
                 src="https://img.icons8.com/ios/100/000000/linkedin.png"

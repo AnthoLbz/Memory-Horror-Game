@@ -71,120 +71,120 @@
   margin-top: 21px;
   cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
 }
-.footer p{
+.footer p {
   color: white;
   font-family: "Mukadua";
   font-size: 20px;
   margin: 40px;
   font-weight: bold;
+  cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
 }
-.footer p:hover{
+.footer p:hover {
   color: #880000;
 }
-.playlist {
- margin-left: -70%;
- margin-top: -2.15%;
+.playlist-landing {
+  margin-left: -70%;
+  margin-top: -2.2%;
 }
 @media screen and (max-width: 800px) {
-  .playlist {
- margin-left: -35%;
- margin-top: -2.15%;
- padding-top: 20px;
- margin-bottom: 5px;
+  .playlist-landing {
+    margin-left: -35%;
+    margin-top: -2.15%;
+    padding-top: 20px;
+    margin-bottom: 5px;
+  }
+  .landingTitle {
+    background-image: url(https://media.giphy.com/media/LShzvtC3Ri1oO7TMHT/giphy.gif);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 78px;
+    font-family: "Faceyourfears";
+    animation: filling 4s ease forwards;
+    line-height: 80px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin: 3% 0% 7.9% 0%;
+    cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
+  }
 }
-.landingTitle {
-  background-image: url(https://media.giphy.com/media/LShzvtC3Ri1oO7TMHT/giphy.gif);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  color: transparent;
-  font-size: 78px;
-  font-family: "Faceyourfears";
-  animation: filling 4s ease forwards;
-  line-height: 80px;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-content: center;
-  text-align: center;
-  margin: 3% 0% 7.9% 0%;
-  cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
-}
-}
-@media screen and (min-width: 1601px) and (max-width: 1920px){
+@media screen and (min-width: 1601px) and (max-width: 1920px) {
   .landing {
-  background-image: url(../images/landing.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  display: flex;
-  flex-flow: wrap column;
-  z-index: 20;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.7);
-  margin: 0;
-  padding: 0;
-  height: 1057px;
-  cursor: url("../fonts/cursor/curseur-souris.png"), pointer;
-}
-.landingTitle {
-  background-image: url(https://media.giphy.com/media/LShzvtC3Ri1oO7TMHT/giphy.gif);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  color: transparent;
-  font-size: 78px;
-  font-family: "Faceyourfears";
-  animation: filling 4s ease forwards;
-  line-height: 80px;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-content: center;
-  cursor: pointer;
-  text-align: center;
-  margin: -33% 0% 10% 0%;
-  cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
-}
-.container {
-  padding: 10px 10px 10px 10px;
-  margin: -5% 15% 5% 15%;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-.container p {
-  text-align: center;
-  padding: 10px;
-  color: white;
-  font-size: 24px;
-  font-weight: 50;
-  font-family: "Mukadua";
-  margin-bottom: 50px;
-}
-.play {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
-}
-.footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 21px;
-  cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
-}
-.footer p{
-  color: white;
-  font-family: "Mukadua";
-  font-size: 25px;
-  margin: 40px;
-  font-weight: bold;
-}
-.footer p:hover{
-  color: #880000;
-}
-.playlist {
- margin-left: -75%;
- margin-bottom: -19%;
-}
+    background-image: url(../images/landing.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    display: flex;
+    flex-flow: wrap column;
+    z-index: 20;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: 0;
+    padding: 0;
+    height: 1057px;
+    cursor: url("../fonts/cursor/curseur-souris.png"), pointer;
+  }
+  .landingTitle {
+    background-image: url(https://media.giphy.com/media/LShzvtC3Ri1oO7TMHT/giphy.gif);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 78px;
+    font-family: "Faceyourfears";
+    animation: filling 4s ease forwards;
+    line-height: 80px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    cursor: pointer;
+    text-align: center;
+    margin: -3% 0% 20% 0%;
+    cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
+  }
+  .container {
+    padding: 10px 10px 10px 10px;
+    margin: -5% 15% 5% 15%;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .container p {
+    text-align: center;
+    padding: 10px;
+    color: white;
+    font-size: 24px;
+    font-weight: 50;
+    font-family: "Mukadua";
+    margin-bottom: 50px;
+  }
+  .play {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
+  }
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 21px;
+    cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
+  }
+  .footer p {
+    color: white;
+    font-family: "Mukadua";
+    font-size: 25px;
+    margin: 40px;
+    font-weight: bold;
+  }
+  .footer p:hover {
+    color: #880000;
+  }
+  .playlist-landing {
+    margin-left: -75%;
+  }
 }
