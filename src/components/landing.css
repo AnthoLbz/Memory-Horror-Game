@@ -59,10 +59,44 @@
   font-family: "Mukadua";
 }
 .play {
+  font-family: "Faceyourfears";
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
+  transition: 0.8s;
+  margin: 20px;
   cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
+  text-align: center;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 50px;
+  opacity: 90%;
+  background-color: rgb(59, 59, 59);
+  text-shadow: -2px -2px rgb(2, 0, 0), 2px 2px rgb(92, 2, 2);
+  color: #880000;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 10px;
+  border:solid rgb(22, 22, 22);
+  box-shadow: 0.2rem 0.1em rgb(26, 0, 0);
+  margin-right: auto;
+  margin-left: auto;
+  margin: 5px;
+  height: 100px;
+  width: 250px;
+  padding: 10px 0 10px 10px;
+}
+
+.play:active{
+  box-shadow: none;
+  position: relative;
+  top: 0.2em;
+}
+.play:hover{
+  color: grey;
+  background-image: url(https://media2.giphy.com/media/f4IjBQupqojhqQzKk2/giphy.webp?cid=ecf05e47359f10b3851c1e1b53bf759f3008f6e36842309d&rid=giphy.webp);
+
 }
 .footer {
   display: flex;

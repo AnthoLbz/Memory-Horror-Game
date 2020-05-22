@@ -1,7 +1,5 @@
 import React from "react";
 import "./landing.css";
-import Button from "./Buttons";
-import "./button.css";
 import { Link } from "react-router-dom";
 import PlayList from "./PlayList";
 
@@ -31,15 +29,9 @@ const Landing = () => {
         </p>
       </h2>
       <Link to="/Game">
-        <Button
-          class="play"
-          type="button"
-          buttonSize="btn--game"
-          buttonStyle="btn--play--solid"
-          onClick
-        >
+        <button className="play">
           ► Play
-        </Button>
+        </button>
       </Link>
       <div className="footer">
         <Link to="/Videos">
