@@ -28,11 +28,13 @@ const Landing = () => {
           Here, click on the play button to meet your end ! I mean your fate...
         </p>
       </h2>
-      <Link to="/Game">
-        <button className="play">
-          ► Play
-        </button>
-      </Link>
+      <div>
+        <Link to="/Game">
+          <button className="play">
+            <p>► Play</p>
+          </button>
+        </Link>
+      </div>
       <div className="footer">
         <Link to="/Videos">
           <p>Videos</p>
