@@ -35,7 +35,7 @@ const Game = () => {
     shuffle(cards);
     reset();
     setMinutes(1);
-    setSeconds(10);
+    setSeconds(30);
     setBonus([]);
   };
 

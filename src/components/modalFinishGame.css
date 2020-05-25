@@ -47,6 +47,7 @@ button {
 .homeFinish {
   font-family: "Faceyourfears";
   padding: 20px;
+  font-size: 25px;
   cursor: url("../fonts/cursor/curseur-main-pointeur.png"),pointer;
 }
 
