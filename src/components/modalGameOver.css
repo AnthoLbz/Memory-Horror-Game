@@ -55,15 +55,13 @@
   font-family: "Faceyourfears";
   font-size: 25px;
   padding: 20px;
-  cursor: url("../fonts/cursor/curseur-main-pointeur.png"),pointer;
-}
-button {
   border-radius: 10px;
   color: white;
   background-color: transparent;
   border: none;
   cursor: url("../fonts/cursor/curseur-main-pointeur.png"),pointer;
 }
+
 button:hover {
   color: #880000;
   cursor: url("../fonts/cursor/curseur-main-pointeur.png"),pointer;

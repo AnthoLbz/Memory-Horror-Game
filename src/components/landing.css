@@ -47,7 +47,7 @@
 }
 .container {
   padding: 0px 10px 10px 10px;
-  margin: -2.1% 15% 3% 15%;
+  margin: -2.1% 15% 1% 15%;
   background-color: rgba(0, 0, 0, 0.3);
 }
 .container p {
@@ -63,14 +63,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.8s;
+  transition: 0.5s;
   margin: 20px;
   cursor: url("../fonts/cursor/curseur-main-pointeur.png"), pointer;
   text-align: center;
   display: inline-block;
   font-weight: bold;
   font-size: 50px;
-  opacity: 90%;
   background-color: rgb(59, 59, 59);
   text-shadow: -2px -2px rgb(2, 0, 0), 2px 2px rgb(92, 2, 2);
   color: #880000;
@@ -118,7 +117,7 @@
 }
 .playlist-landing {
   margin-left: -70%;
-  margin-top: -2.2%;
+  margin-top: 0%;
 }
 @media screen and (max-width: 800px) {
   .playlist-landing {

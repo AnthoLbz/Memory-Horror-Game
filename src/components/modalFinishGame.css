@@ -35,17 +35,13 @@
   cursor: url("../fonts/cursor/curseur-souris.png"),pointer;
 }
 
-button {
+.resetGame,
+.homeFinish {
+  font-family: "Faceyourfears";
   border-radius: 10px;
   color: white;
   background-color: transparent;
   border: none;
-  cursor: url("../fonts/cursor/curseur-main-pointeur.png"),pointer;
-}
-
-.resetGame,
-.homeFinish {
-  font-family: "Faceyourfears";
   padding: 20px;
   font-size: 25px;
   cursor: url("../fonts/cursor/curseur-main-pointeur.png"),pointer;
